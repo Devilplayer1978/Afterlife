@@ -213,35 +213,35 @@ nav {
   100% { transform: rotate(360deg); }
 }
 
-/* DISCORD BUTTON */
-#discordButton {
+/* SOCIAL BUTTONS LINKS MITTE */
+.social-buttons {
   position: fixed;
-  bottom: 100px;
-  right: 40px;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
   z-index: 100;
-  width: 60px;
-  height: 60px;
-  background-color: #7289da;
-  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-buttons a {
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px #7289da;
-  animation: pulse 2s infinite;
-  transition: background 0.3s ease;
+  background: none;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#discordButton:hover {
-  background-color: #5b6eae;
+.social-buttons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff1a1a88;
 }
 
-#discordButton img {
-  width: 30px;
-  height: 30px;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 10px #7289da; }
-  50% { box-shadow: 0 0 20px #7289da; }
-  100% { box-shadow: 0 0 10px #7289da; }
+.social-buttons img {
+  width: 60px;
+  height: 60px;
 }
