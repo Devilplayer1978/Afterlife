@@ -15,3 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error(error);
     });
 });
+// Burger Menü Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+});
