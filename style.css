@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* HEADLINES */
@@ -29,9 +30,8 @@ p {
 /* HERO SECTION */
 .hero {
   background: linear-gradient(to bottom, #000000cc, #000000f2),
-              url('assets/background.webp') no-repeat center center;
+              url('assets/background.webp') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
   color: #fff;
   display: flex;
@@ -39,35 +39,59 @@ p {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  animation: fadeInHero 2s ease-in-out;
+}
+
+@keyframes fadeInHero {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .hero-logo {
   max-width: 200px;
   height: auto;
   margin-bottom: 1rem;
-  filter: drop-shadow(0 0 6px red);
+  animation: glowLogo 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowLogo {
+  0% { filter: drop-shadow(0 0 6px red); }
+  100% { filter: drop-shadow(0 0 12px crimson); }
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   color: #ccc;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards;
+  animation-delay: 1s;
 }
 
 .scroll-down {
   font-size: 2rem;
   margin-top: 2rem;
-  animation: bounce 2s infinite;
+  animation: bounce 2s infinite, fadeInText 2s ease forwards;
+  animation-delay: 1.5s;
   color: #aaa;
+  opacity: 0;
 }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* SECTIONS */
