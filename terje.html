@@ -8,8 +8,6 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
-
-  <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
@@ -38,29 +36,84 @@
 <main>
   <section id="terje-story" class="fade-in">
     <h2>Die Geschichte von Terje</h2>
-    <p>In den dunklen Tagen nach dem Ausbruch entwickelte eine kleine Gruppe Überlebender unter der Führung von Dr. Terje eine revolutionäre Heilmethode. Die Terje-Medizin kombiniert alte Heilkräuter mit moderner Biochemie – aber birgt Risiken und Nebenwirkungen. Nur die Mutigsten wagen es, sie zu nutzen.</p>
+    <p>In den dunklen Tagen nach dem Ausbruch entwickelte Dr. Terje eine revolutionäre Medizin. Ihre Wirkung ist legendär – aber nicht ohne Risiko.</p>
   </section>
 
   <section id="terje-heilmittel" class="fade-in">
     <h2>Verfügbare Heilmittel</h2>
-    <div class="mod-grid">
 
-      <div class="mod-card">
-        <h3>Terje-Salbe</h3>
-        <p>Hilft bei der schnellen Heilung kleiner Wunden und Kratzer. Anwendung auf der Haut.</p>
-      </div>
-
-      <div class="mod-card">
-        <h3>T-Serum</h3>
-        <p>Injektion zur Behandlung infizierter Bisse. Geringes Risiko starker Nebenwirkungen.</p>
-      </div>
-
-      <div class="mod-card">
-        <h3>Regenerations-Injektion</h3>
-        <p>Stimuliert die Zellheilung nach schweren Verletzungen. Nur einmal täglich sicher anwendbar.</p>
-      </div>
-
+    <div class="button-grid">
+      <button class="med-button" data-target="krankheiten">Krankheiten</button>
+      <button class="med-button" data-target="salben">Salben</button>
+      <button class="med-button" data-target="tabletten">Tabletten</button>
+      <button class="med-button" data-target="phiolen">Phiolen & Injektoren</button>
     </div>
+
+    <!-- Krankheitsbereich -->
+    <div id="krankheiten" class="med-section">
+      <div class="med-card">
+        <img src="assets/dummy-krankheit.png" alt="Infektion">
+        <div class="med-info">
+          <h3>Infektion</h3>
+          <p>Erhöht Fieber, verursacht Schwäche und Tod ohne Behandlung.</p>
+        </div>
+      </div>
+      <div class="med-card">
+        <img src="assets/dummy-krankheit.png" alt="Vergiftung">
+        <div class="med-info">
+          <h3>Vergiftung</h3>
+          <p>Langsames Lebensermatten und Erbrechen. Behandlung dringend erforderlich.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Salbenbereich -->
+    <div id="salben" class="med-section">
+      <div class="med-card">
+        <img src="assets/dummy-salbe.png" alt="Terje Salbe">
+        <div class="med-info">
+          <h3>Terje-Salbe</h3>
+          <p>Heilt kleine Wunden und Kratzer schnell. Direkt auftragen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tablettenbereich -->
+    <div id="tabletten" class="med-section">
+      <div class="med-card">
+        <img src="assets/dummy-tablette.png" alt="Antibiotika">
+        <div class="med-info">
+          <h3>Antibiotika</h3>
+          <p>Behandelt bakterielle Infektionen und stabilisiert den Patienten.</p>
+        </div>
+      </div>
+      <div class="med-card">
+        <img src="assets/dummy-tablette.png" alt="Schmerzmittel">
+        <div class="med-info">
+          <h3>Schmerzmittel</h3>
+          <p>Reduziert Schmerzsymptome temporär, ohne die Ursache zu heilen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phiolenbereich -->
+    <div id="phiolen" class="med-section">
+      <div class="med-card">
+        <img src="assets/dummy-phiole.png" alt="T-Serum">
+        <div class="med-info">
+          <h3>T-Serum</h3>
+          <p>Notfallbehandlung für Infektionen. Hochwirksam aber riskant.</p>
+        </div>
+      </div>
+      <div class="med-card">
+        <img src="assets/dummy-phiole.png" alt="Regenerations-Injektion">
+        <div class="med-info">
+          <h3>Regenerations-Injektion</h3>
+          <p>Beschleunigt Zellregeneration. Nebenwirkungen möglich.</p>
+        </div>
+      </div>
+    </div>
+
   </section>
 </main>
 
@@ -81,6 +134,26 @@
     <img src="assets/steam-icon.png" alt="Steam Icon">
   </a>
 </div>
+
+<!-- JavaScript zum Ein-/Ausklappen -->
+<script>
+document.querySelectorAll('.med-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const target = document.getElementById(button.dataset.target);
+    if (target.style.maxHeight) {
+      target.style.maxHeight = null;
+      target.style.opacity = 0;
+    } else {
+      document.querySelectorAll('.med-section').forEach(section => {
+        section.style.maxHeight = null;
+        section.style.opacity = 0;
+      });
+      target.style.maxHeight = target.scrollHeight + "px";
+      target.style.opacity = 1;
+    }
+  });
+});
+</script>
 
 </body>
 </html>
