@@ -1,7 +1,7 @@
 // SERVERSTATUS LADEN inkl. MATRIX-LOADER
 document.addEventListener("DOMContentLoaded", function () {
-  const apiToken = "HIER_DEIN_API_TOKEN";
-  const serverId = "HIER_DEINE_SERVER_ID";
+  const apiToken = "Hif26l9OSuf3MZXND40AH_83e3s31Rt7NGyij76QakU=";
+  const serverId = "413ede25-e5df-47b0-9da7-9f3439faa804";
 
   const serverStatusDiv = document.getElementById("serverStatus");
 
