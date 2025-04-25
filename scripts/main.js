@@ -1,8 +1,5 @@
-// SERVERSTATUS LADEN inkl. MATRIX-LOADER
+// SERVERSTATUS LADEN inkl. MATRIX-LOADER + Dummy-Daten
 document.addEventListener("DOMContentLoaded", function () {
-  const apiToken = "Hif26l9OSuf3MZXND40AH_83e3s31Rt7NGyij76QakU=";
-  const serverId = "413ede25-e5df-47b0-9da7-9f3439faa804";
-
   const serverStatusDiv = document.getElementById("serverStatus");
 
   // Matrix-Loader Canvas erstellen
@@ -44,73 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const matrixInterval = setInterval(drawMatrix, 50);
 
-  // Serverdaten abfragen
-  fetch(`https://api.cftools.cloud/v1/proxy/servers/${serverId}/status`, {
-    headers: {
-      "Authorization": `Bearer ${apiToken}`
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Matrix-Loader sanft ausblenden
+  // DUMMY-DATEN NACH 4 SEKUNDEN ZEIGEN
+  setTimeout(() => {
     clearInterval(matrixInterval);
     canvas.style.transition = "opacity 1s ease";
     canvas.style.opacity = "0";
 
     setTimeout(() => {
       canvas.remove();
-
-      const server = data.data.server;
       serverStatusDiv.innerHTML = `
-        <p><strong>Servername:</strong> ${server.name}</p>
-        <p><strong>Spieler:</strong> ${server.players.online} / ${server.players.max}</p>
-        <p><strong>Map:</strong> ${server.map.name}</p>
-        <p><strong>Status:</strong> <span style="color: ${server.online ? 'lime' : 'red'}">${server.online ? 'Online' : 'Offline'}</span></p>
+        <p><strong>Servername:</strong> Afterlife DayZ</p>
+        <p><strong>Spieler:</strong> 22 / 60</p>
+        <p><strong>Map:</strong> ChernarusPlus</p>
+        <p><strong>Status:</strong> <span style="color: lime;">Online</span></p>
       `;
-    }, 1000); // erst nach FadeOut Canvas entfernen
-  })
-  .catch(error => {
-    clearInterval(matrixInterval);
-    canvas.style.transition = "opacity 1s ease";
-    canvas.style.opacity = "0";
-
-    setTimeout(() => {
-      canvas.remove();
-      serverStatusDiv.innerHTML = "<p style='color: red;'>Fehler beim Laden der Serverdaten.</p>";
     }, 1000);
-
-    console.error(error);
-  });
-
-  // BURGER MENÜ (optional, falls vorhanden)
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-
-  if (burger && nav) {
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  }
-
-  // FADE-IN BEIM SCROLLEN
-  const fadeElements = document.querySelectorAll('.fade-in');
-
-  const observerOptions = {
-    threshold: 0.1
-  };
-
-  const fadeInOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  fadeElements.forEach(element => {
-    fadeInOnScroll.observe(element);
-  });
+  }, 4000); // 4 Sekunden Matrix-Regen anzeigen
 });
 
 // BACK TO TOP BUTTON
@@ -139,4 +85,26 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     preloader.remove();
   }, 500);
+});
+
+// FADE-IN BEIM SCROLLEN
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const fadeInOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  fadeElements.forEach(element => {
+    fadeInOnScroll.observe(element);
+  });
 });
