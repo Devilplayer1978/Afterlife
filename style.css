@@ -29,8 +29,9 @@ p {
 /* HERO SECTION */
 .hero {
   background: linear-gradient(to bottom, #000000cc, #000000f2),
-              url('https://images.unsplash.com/photo-1603228259724-74e7df5d5a6a?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+              url('assets/background.webp') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   color: #fff;
   display: flex;
