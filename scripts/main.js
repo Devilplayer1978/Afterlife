@@ -1,3 +1,4 @@
+// SERVERSTATUS LADEN
 document.addEventListener("DOMContentLoaded", function () {
   fetch('data/server-info.json')
     .then(response => response.json())
@@ -14,13 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("serverStatus").innerHTML = "<p style='color: red;'>Fehler beim Laden der Serverdaten.</p>";
       console.error(error);
     });
-});
-// Burger Menü Animation
-document.addEventListener("DOMContentLoaded", function () {
+
+  // BURGER MENÜ
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
 
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
 });
