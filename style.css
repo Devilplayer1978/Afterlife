@@ -8,11 +8,18 @@ body {
   scroll-behavior: smooth;
 }
 
+/* HEADLINES */
 h1, h2 {
   margin: 0.5em 0;
   text-align: center;
+  color: #ff1a1a;
+  font-family: 'Black Ops One', sans-serif;
+  text-shadow: 2px 2px 4px black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
+/* PARAGRAPH */
 p {
   text-align: center;
   max-width: 800px;
@@ -73,6 +80,7 @@ iframe {
   border: none;
   border-radius: 8px;
 }
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -81,6 +89,7 @@ footer {
   font-size: 0.9rem;
   color: #888;
 }
+
 /* STICKY NAVIGATION */
 nav {
   position: sticky;
@@ -89,16 +98,4 @@ nav {
   background: #111;
   padding: 1rem 0;
   border-bottom: 1px solid #222;
-}
-
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
-}
-h1, h2 {
-  color: #ff1a1a;
-  font-family: 'Black Ops One', sans-serif;
-  text-shadow: 2px 2px 4px black;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
