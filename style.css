@@ -99,3 +99,38 @@ nav {
   padding: 1rem 0;
   border-bottom: 1px solid #222;
 }
+
+/* MOD-GRID STYLE */
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-items: center;
+}
+
+.mod-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ff1a1a55;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mod-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff1a1a88;
+}
+
+.mod-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.mod-card h3 {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
