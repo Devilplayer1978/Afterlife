@@ -246,7 +246,6 @@ nav {
   transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover-Glow für spezielle Icons */
 .social-buttons a[href*="discord"]:hover img {
   filter: drop-shadow(0 0 10px #7289da);
 }
@@ -272,4 +271,73 @@ nav {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* NEU: TERJE BUTTONS UND SLIDE SECTIONS */
+.button-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.med-button {
+  background-color: #cc1a1a;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff1a1a88;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+.med-button:hover {
+  background-color: #a50d0d;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px #ff1a1a88; }
+  50% { box-shadow: 0 0 15px #ff1a1a; }
+  100% { box-shadow: 0 0 5px #ff1a1a88; }
+}
+
+.med-section {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+}
+
+.med-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #222;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px #ff1a1a55;
+}
+
+.med-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.med-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff1a1a;
+}
+
+.med-info p {
+  margin: 0.5rem 0 0 0;
+  color: #ccc;
 }
