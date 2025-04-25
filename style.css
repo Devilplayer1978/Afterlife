@@ -212,3 +212,36 @@ nav {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* DISCORD BUTTON */
+#discordButton {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  background-color: #7289da;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #7289da;
+  animation: pulse 2s infinite;
+  transition: background 0.3s ease;
+}
+
+#discordButton:hover {
+  background-color: #5b6eae;
+}
+
+#discordButton img {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #7289da; }
+  50% { box-shadow: 0 0 20px #7289da; }
+  100% { box-shadow: 0 0 10px #7289da; }
+}
