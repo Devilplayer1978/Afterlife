@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error(error);
     });
 
-  // BURGER MENÜ
+  // BURGER MENÜ (Optional, falls vorhanden)
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
 
@@ -25,6 +25,26 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.toggle('active');
     });
   }
+
+  // FADE-IN BEIM SCROLLEN
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const fadeInOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  fadeElements.forEach(element => {
+    fadeInOnScroll.observe(element);
+  });
 });
 
 // BACK TO TOP BUTTON
