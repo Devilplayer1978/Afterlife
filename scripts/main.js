@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
       canvas.remove();
       serverStatusDiv.innerHTML = `
         <p><strong>Servername:</strong> Afterlife DayZ</p>
-        <p><strong>Spieler:</strong> 22 / 60</p>
-        <p><strong>Map:</strong> ChernarusPlus</p>
+        <p><strong>Spieler:</strong> 8 / 40</p>
+        <p><strong>Map:</strong> Namalsk</p>
         <p><strong>Status:</strong> <span style="color: lime;">Online</span></p>
       `;
     }, 1000);
