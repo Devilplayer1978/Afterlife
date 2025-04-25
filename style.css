@@ -71,7 +71,6 @@ iframe {
   border: none;
   border-radius: 8px;
 }
-
 /* FOOTER */
 footer {
   text-align: center;
@@ -79,4 +78,23 @@ footer {
   background: #111;
   font-size: 0.9rem;
   color: #888;
+}
+/* STICKY NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #111;
+  padding: 1rem 0;
+  border-bottom: 1px solid #222;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+h1, h2 {
+  color: #ff1a1a; /* blutiges Rot */
+  font-family: 'Creepster', cursive;
+  text-shadow: 2px 2px 5px black;
 }
