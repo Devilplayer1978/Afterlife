@@ -26,3 +26,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// BACK TO TOP BUTTON
+const backToTopButton = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+// PRELOADER ENTFERNEN
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0';
+  preloader.style.pointerEvents = 'none';
+  setTimeout(() => {
+    preloader.remove();
+  }, 500);
+});
