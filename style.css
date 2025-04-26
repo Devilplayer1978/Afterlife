@@ -324,9 +324,8 @@ footer {
 
 /* TERJE BUTTONS UND SLIDES */
 .button-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   margin: 2rem 0;
 }
@@ -335,17 +334,24 @@ footer {
   background-color: #cc1a1a;
   border: none;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem;
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 0 10px #ff1a1a88;
   animation: pulse 2s infinite;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .med-button:hover {
   background-color: #a50d0d;
+  transform: scale(1.02);
 }
 
 @keyframes pulse {
