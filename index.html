@@ -19,14 +19,26 @@
 <div id="preloader"><div class="loader"></div></div>
 
 <!-- NAVIGATION -->
-<div class="custom-nav">
-  <a class="nav-btn" href="index.html"><span>Home</span></a>
-  <a class="nav-btn" href="about.html"><span>Über Uns</span></a>
-  <a class="nav-btn" href="rules.html"><span>Regeln</span></a>
-  <a class="nav-btn" href="changelog.html"><span>Changelog</span></a>
-  <a class="nav-btn" href="events.html"><span>Events</span></a>
-  <a class="nav-btn" href="terje.html"><span>Terje-Medizin</span></a>
-</div>
+<header class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="logo">
+      <img src="assets/Logo.png" alt="Afterlife Logo">
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">Über Uns</a>
+    <a href="rules.html">Regeln</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="events.html">Events</a>
+    <a href="terje.html">Terje-Medizin</a>
+  </nav>
+</header>
 
 <!-- HERO SECTION -->
 <section class="hero" style="background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/background.webp') no-repeat center center fixed; background-size: cover;">
@@ -108,6 +120,13 @@
     <img src="assets/steam-icon.png" alt="Steam Icon">
   </a>
 </div>
+
+<script>
+// Hamburger Menü
+document.getElementById('menuToggle').addEventListener('click', function () {
+  document.getElementById('menu').classList.toggle('open');
+});
+</script>
 
 </body>
 </html>
