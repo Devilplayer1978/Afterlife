@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Terje-Medizin - Afterlife DayZ</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
+
+  <!-- JavaScript -->
   <script defer src="scripts/main.js"></script>
 </head>
+
 <body>
 
 <div id="preloader"><div class="loader"></div></div>
@@ -170,7 +174,7 @@
   </a>
 </div>
 
-<!-- JavaScript zum Aufklappen -->
+<!-- JavaScript für Buttons -->
 <script>
 document.querySelectorAll('.med-button').forEach(button => {
   button.addEventListener('click', () => {
@@ -184,6 +188,19 @@ document.querySelectorAll('.med-button').forEach(button => {
       target.classList.add('active');
     }
   });
+});
+
+// Back to Top
+const backToTopButton = document.getElementById("backToTop");
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+};
+backToTopButton.addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
 
