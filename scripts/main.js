@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const serverStatusDiv = document.getElementById("serverStatus");
 
   if (serverStatusDiv) {
-    // Nur wenn #serverStatus existiert, Matrix-Loader aktivieren
     const canvas = document.createElement('canvas');
     canvas.id = "matrixCanvas";
     serverStatusDiv.appendChild(canvas);
@@ -42,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const matrixInterval = setInterval(drawMatrix, 50);
 
-    // DUMMY-DATEN NACH 4 SEKUNDEN ZEIGEN
     setTimeout(() => {
       clearInterval(matrixInterval);
       canvas.style.transition = "opacity 1s ease";
@@ -57,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <p><strong>Status:</strong> <span style="color: lime;">Online</span></p>
         `;
       }, 1000);
-    }, 4000); // 4 Sekunden Matrix-Regen anzeigen
+    }, 4000);
   }
 });
 
@@ -115,6 +113,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fadeElements.forEach(element => {
       fadeInOnScroll.observe(element);
+    });
+  }
+});
+
+// TERJE POPUP BUTTONS
+document.addEventListener("DOMContentLoaded", function () {
+  const medButtons = document.querySelectorAll('.med-button');
+
+  if (medButtons.length > 0) {
+    medButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = document.getElementById(button.dataset.target);
+        if (target.classList.contains('active')) {
+          target.classList.remove('active');
+        } else {
+          document.querySelectorAll('.med-section').forEach(section => {
+            section.classList.remove('active');
+          });
+          target.classList.add('active');
+        }
+      });
     });
   }
 });
