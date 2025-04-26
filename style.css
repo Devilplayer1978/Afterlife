@@ -245,7 +245,7 @@ p {
   color: #ccc;
 }
 
-/* === SOCIAL BUTTONS LINKS === */
+/* SOCIAL BUTTONS LINKS */
 .social-buttons {
   position: fixed;
   top: 50%;
@@ -269,14 +269,14 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-buttons img {
-  width: 40px;
-  height: 40px;
-}
-
 .social-buttons a:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px #ff1a1a;
+}
+
+.social-buttons img {
+  width: 40px;
+  height: 40px;
 }
 
 /* === BACK TO TOP BUTTON === */
