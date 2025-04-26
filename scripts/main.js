@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// TERJE POPUP BUTTONS
+// TERJE POPUP BUTTONS (KRANKHEITEN UND HEILMITTEL)
 document.addEventListener("DOMContentLoaded", function () {
   const medButtons = document.querySelectorAll('.med-button');
 
