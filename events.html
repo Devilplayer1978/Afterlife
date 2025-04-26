@@ -7,11 +7,11 @@
   <title>Events - Afterlife DayZ</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
 
   <!-- JavaScript -->
-  <script defer src="scripts/main.js?v=3"></script>
+  <script defer src="scripts/main.js?v=4"></script>
 </head>
 
 <body>
@@ -19,14 +19,26 @@
 <div id="preloader"><div class="loader"></div></div>
 
 <!-- NAVIGATION -->
-<div class="custom-nav">
-  <a class="nav-btn" href="index.html"><span>Home</span></a>
-  <a class="nav-btn" href="about.html"><span>Über Uns</span></a>
-  <a class="nav-btn" href="rules.html"><span>Regeln</span></a>
-  <a class="nav-btn" href="changelog.html"><span>Changelog</span></a>
-  <a class="nav-btn" href="events.html"><span>Events</span></a>
-  <a class="nav-btn" href="terje.html"><span>Terje-Medizin</span></a>
-</div>
+<header class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="logo">
+      <img src="assets/Logo.png" alt="Afterlife Logo" class="logo-glow">
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="menu" id="menu">
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="about.html">Über Uns</a>
+    <a class="nav-btn" href="rules.html">Regeln</a>
+    <a class="nav-btn" href="changelog.html">Changelog</a>
+    <a class="nav-btn" href="events.html">Events</a>
+    <a class="nav-btn" href="terje.html">Terje-Medizin</a>
+  </nav>
+</header>
 
 <!-- HERO SECTION -->
 <section class="hero" style="background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/background.webp') no-repeat center center fixed; background-size: cover;">
@@ -59,7 +71,7 @@
 <!-- BACK TO TOP BUTTON -->
 <button id="backToTop" title="Nach oben">▲</button>
 
-<!-- SOCIAL BUTTONS LINKS MITTE -->
+<!-- SOCIAL BUTTONS -->
 <div class="social-buttons">
   <a href="https://discord.gg/v7vHFVA5rV" target="_blank" title="Join Discord">
     <img src="assets/discord-button.png" alt="Discord Icon">
@@ -68,6 +80,69 @@
     <img src="assets/steam-icon.png" alt="Steam Icon">
   </a>
 </div>
+
+<!-- JavaScript für Menü, Preloader, Buttons -->
+<script>
+// Hamburger Menü Logik
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+if (menuToggle && menu) {
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+}
+
+// Navbar Transparenz beim Scrollen
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Preloader entfernen
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    preloader.style.opacity = '0';
+    preloader.style.pointerEvents = 'none';
+    setTimeout(() => {
+      preloader.remove();
+    }, 500);
+  }
+});
+
+// Back to Top Button
+window.addEventListener('scroll', () => {
+  const backToTop = document.getElementById('backToTop');
+  if (window.scrollY > 300) {
+    backToTop.style.display = 'block';
+  } else {
+    backToTop.style.display = 'none';
+  }
+});
+
+document.getElementById('backToTop').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Fade-In Effekte
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeElements.forEach(element => observer.observe(element));
+});
+</script>
 
 </body>
 </html>
