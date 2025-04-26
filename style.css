@@ -94,7 +94,7 @@ p {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* NAVIGATION - BLUTIGER BUTTON */
+/* NAVIGATION - BUTTONS */
 .custom-nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -109,17 +109,16 @@ p {
   background-size: cover;
   width: 100%;
   height: 100px;
-  border: none;
-  cursor: pointer;
-  font-family: 'Black Ops One', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: white;
   text-shadow: 2px 2px 4px black;
+  border: none;
+  cursor: pointer;
   box-shadow: 0 0 15px #ff1a1a88;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -129,39 +128,11 @@ p {
   box-shadow: 0 0 30px #ff1a1a;
 }
 
-.nav-btn:active {
-  transform: scale(0.95);
-}
-
-.nav-btn a {
-  color: white;
-  text-decoration: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* SECTIONS */
 main section {
   padding: 4rem 2rem;
   background-color: #181818;
   border-top: 1px solid #333;
-}
-
-iframe {
-  border: none;
-  border-radius: 8px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #111;
-  font-size: 0.9rem;
-  color: #888;
 }
 
 /* MOD GRID */
@@ -205,7 +176,6 @@ footer {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  z-index: 100;
   background-color: #ff1a1a;
   color: #fff;
   border: none;
@@ -226,16 +196,16 @@ footer {
 #preloader {
   background: #0e0e0e;
   bottom: 0;
-  height: 100%;
   left: 0;
-  position: fixed;
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  height: 100%;
+  position: fixed;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
 .loader {
@@ -252,16 +222,16 @@ footer {
   100% { transform: rotate(360deg); }
 }
 
-/* SOCIAL BUTTONS LINKS MITTE */
+/* SOCIAL BUTTONS LINKS */
 .social-buttons {
   position: fixed;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
-  z-index: 100;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  z-index: 100;
 }
 
 .social-buttons a {
@@ -275,34 +245,9 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-buttons a:hover {
-  transform: scale(1.1);
-}
-
 .social-buttons img {
   width: 60px;
   height: 60px;
-  transition: filter 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-buttons a[href*="discord"]:hover img {
-  filter: drop-shadow(0 0 10px #7289da);
-}
-
-.social-buttons a[href*="steam"]:hover img {
-  filter: drop-shadow(0 0 10px #cccccc);
-}
-
-/* FADE IN SECTIONS */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* TERJE BUTTONS UND SLIDES */
@@ -320,16 +265,15 @@ footer {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #ff1a1a88;
-  animation: pulse 2s infinite;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   width: 100%;
   height: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 10px #ff1a1a88;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .med-button:hover {
@@ -343,56 +287,19 @@ footer {
   100% { box-shadow: 0 0 5px #ff1a1a88; }
 }
 
-.med-section {
-  overflow: hidden;
-  max-height: 0;
+/* SECTIONS SLIDE EFFECT */
+.fade-in {
   opacity: 0;
-  transform: translateY(-10px);
-  transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
-  margin-top: 1rem;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.med-section.active {
+.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-  max-height: 1500px;
 }
 
-.med-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: #222;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem 0;
-  box-shadow: 0 0 10px #ff1a1a55;
-  transition: box-shadow 0.3s ease;
-}
-
-.med-card:hover {
-  box-shadow: 0 0 20px #ff1a1a, 0 0 40px #ff1a1a66;
-}
-
-.med-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.med-info h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #ff1a1a;
-}
-
-.med-info p {
-  margin: 0.5rem 0 0 0;
-  color: #ccc;
-}
-
-/* RESPONSIVE: MOBILE ANPASSUNG */
+/* MOBILE OPTIMIERUNG */
 @media (max-width: 768px) {
   .custom-nav {
     grid-template-columns: 1fr;
