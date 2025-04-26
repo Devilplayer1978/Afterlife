@@ -287,6 +287,58 @@ main section {
   100% { box-shadow: 0 0 5px #ff1a1a88; }
 }
 
+/* TERJE POPUP-BEREICHE */
+.med-section {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+  margin-top: 1rem;
+}
+
+/* Wichtig: Aktivierte Sektionen sichtbar machen */
+.med-section.active {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1500px;
+}
+
+/* MOD-CARDS IN TERJE-POPUPS */
+.med-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #222;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px #ff1a1a55;
+  transition: box-shadow 0.3s ease;
+}
+
+.med-card:hover {
+  box-shadow: 0 0 20px #ff1a1a88;
+}
+
+.med-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.med-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff1a1a;
+}
+
+.med-info p {
+  margin: 0.5rem 0 0;
+  color: #ccc;
+}
+
 /* SECTIONS SLIDE EFFECT */
 .fade-in {
   opacity: 0;
