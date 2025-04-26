@@ -9,22 +9,6 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
   <script defer src="scripts/main.js"></script>
-  <style>
-    /* Sanfteres Auf- und Zuklappen */
-    .med-section {
-      overflow: hidden;
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .med-section.active {
-      opacity: 1;
-      transform: translateY(0);
-      max-height: 1500px; /* ausreichend Platz */
-    }
-  </style>
 </head>
 <body>
 
@@ -32,12 +16,12 @@
 
 <!-- NAVIGATION -->
 <div class="custom-nav">
-  <button class="nav-btn"><a href="index.html">Home</a></button>
-  <button class="nav-btn"><a href="about.html">Über Uns</a></button>
-  <button class="nav-btn"><a href="rules.html">Regeln</a></button>
-  <button class="nav-btn"><a href="changelog.html">Changelog</a></button>
-  <button class="nav-btn"><a href="events.html">Events</a></button>
-  <button class="nav-btn"><a href="terje.html">Terje-Medizin</a></button>
+  <a class="nav-btn" href="index.html">Home</a>
+  <a class="nav-btn" href="about.html">Über Uns</a>
+  <a class="nav-btn" href="rules.html">Regeln</a>
+  <a class="nav-btn" href="changelog.html">Changelog</a>
+  <a class="nav-btn" href="events.html">Events</a>
+  <a class="nav-btn" href="terje.html">Terje-Medizin</a>
 </div>
 
 <!-- HERO SECTION -->
