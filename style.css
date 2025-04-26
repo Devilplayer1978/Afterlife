@@ -285,7 +285,7 @@ footer {
   filter: drop-shadow(0 0 10px #cccccc);
 }
 
-/* RESPONSIVE: Mobile Optimierung */
+/* MOBILE OPTIMIERUNG */
 @media (max-width: 768px) {
   .social-buttons {
     display: none;
@@ -304,7 +304,7 @@ footer {
   transform: translateY(0);
 }
 
-/* NEU: TERJE BUTTONS UND SLIDE SECTIONS */
+/* TERJE BUTTONS UND SLIDE SECTIONS */
 .button-grid {
   display: flex;
   justify-content: center;
@@ -340,8 +340,15 @@ footer {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: all 0.5s ease;
+  transform: translateY(-10px);
+  transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
   margin-top: 1rem;
+}
+
+.med-section.active {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1500px; /* ausreichend Platz */
 }
 
 .med-card {
@@ -353,6 +360,11 @@ footer {
   padding: 1rem;
   margin: 1rem 0;
   box-shadow: 0 0 10px #ff1a1a55;
+  transition: box-shadow 0.3s ease;
+}
+
+.med-card:hover {
+  box-shadow: 0 0 20px #ff1a1a, 0 0 40px #ff1a1a66;
 }
 
 .med-card img {
