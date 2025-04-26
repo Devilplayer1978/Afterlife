@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Afterlife DayZ Community</title>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=3" />
-  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
-
-  <!-- JavaScript -->
-  <script defer src="scripts/main.js?v=3"></script>
-</head>
-
-<body>
-
-<div id="preloader"><div class="loader"></div></div>
-
-<!-- NAVIGATION -->
-<header class="navbar">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Afterlife DayZ Community</title>  <!-- Stylesheets -->  <link rel="stylesheet" href="style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">  <!-- JavaScript -->  <script defer src="scripts/main.js?v=4"></script></head><body><div id="preloader"><div class="loader"></div></div><!-- NAVIGATION --><header class="navbar">
   <div class="navbar-container">
     <a href="index.html" class="logo">
-      <img src="assets/Logo.png" alt="Afterlife Logo">
+      <img src="assets/Logo.png" alt="Afterlife Logo" class="logo-glow">
     </a>
     <button class="menu-toggle" id="menuToggle">
       <span></span>
@@ -31,102 +16,84 @@
     </button>
   </div>
   <nav class="menu" id="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">Über Uns</a>
-    <a href="rules.html">Regeln</a>
-    <a href="changelog.html">Changelog</a>
-    <a href="events.html">Events</a>
-    <a href="terje.html">Terje-Medizin</a>
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="about.html">Über Uns</a>
+    <a class="nav-btn" href="rules.html">Regeln</a>
+    <a class="nav-btn" href="changelog.html">Changelog</a>
+    <a class="nav-btn" href="events.html">Events</a>
+    <a class="nav-btn" href="terje.html">Terje-Medizin</a>
   </nav>
-</header>
-
-<!-- HERO SECTION -->
-<section class="hero" style="background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/background.webp') no-repeat center center fixed; background-size: cover;">
+</header><!-- HERO SECTION --><section class="hero" style="background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/background.webp') no-repeat center center fixed; background-size: cover;">
   <div class="hero-content">
-    <img src="assets/Logo.png" alt="Afterlife Logo" class="hero-logo" />
+    <img src="assets/Logo.png" alt="Afterlife Logo" class="hero-logo">
     <h1>Afterlife DayZ</h1>
     <p>Deadzone Defenders – Überlebe mit Stil</p>
     <div class="scroll-down">▼</div>
   </div>
-</section>
-
-<!-- MAIN CONTENT -->
-<main>
-
-  <section id="about" class="fade-in">
+</section><!-- MAIN CONTENT --><main>  <section id="about" class="fade-in">
     <h2>Über uns</h2>
     <p>Wir sind eine DayZ-Community mit Fokus auf Atmosphäre, Fairness und Action.</p>
-  </section>
-
-  <section id="mods" class="fade-in">
+  </section>  <section id="mods" class="fade-in">
     <h2>Unsere Mods</h2>
-    <p>Auf unserem Server findest du folgende Erweiterungen:</p>
+    <p>Auf unserem Server findest du folgende Erweiterungen:</p><div class="mod-grid">
+  <div class="mod-card">
+    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1559212036" target="_blank">
+      <img src="https://steamuserimages-a.akamaihd.net/ugc/777359342209512033/61AA37D01F7A0494D931F74BDB08DC75949084D5/" alt="CF Mod">
+      <h3>CF - Community Framework</h3>
+    </a>
+  </div>
+  <div class="mod-card">
+    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1564026768" target="_blank">
+      <img src="https://steamuserimages-a.akamaihd.net/ugc/779613789240278002/557D491B8D2B95A68B3E4ED674A3609744B3DDEF/" alt="COT Tools">
+      <h3>Community Online Tools (COT)</h3>
+    </a>
+  </div>
+  <div class="mod-card">
+    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2116157322" target="_blank">
+      <img src="https://steamuserimages-a.akamaihd.net/ugc/1826779808130655111/F7B2DFA36F865D726BAF9835A668E7D8E41271CA/" alt="Expansion Core">
+      <h3>DayZ Expansion Core</h3>
+    </a>
+  </div>
+</div>
 
-    <div class="mod-grid">
-      <div class="mod-card">
-        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1559212036" target="_blank">
-          <img src="https://steamuserimages-a.akamaihd.net/ugc/777359342209512033/61AA37D01F7A0494D931F74BDB08DC75949084D5/" alt="CF Mod">
-          <h3>CF - Community Framework</h3>
-        </a>
-      </div>
-
-      <div class="mod-card">
-        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1564026768" target="_blank">
-          <img src="https://steamuserimages-a.akamaihd.net/ugc/779613789240278002/557D491B8D2B95A68B3E4ED674A3609744B3DDEF/" alt="COT Tools">
-          <h3>Community Online Tools (COT)</h3>
-        </a>
-      </div>
-
-      <div class="mod-card">
-        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2116157322" target="_blank">
-          <img src="https://steamuserimages-a.akamaihd.net/ugc/1826779808130655111/F7B2DFA36F865D726BAF9835A668E7D8E41271CA/" alt="Expansion Core">
-          <h3>DayZ Expansion Core</h3>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="status" class="fade-in">
+  </section>  <section id="status" class="fade-in">
     <h2>Serverstatus</h2>
     <div id="serverStatus">
       <p>Lade Daten...</p>
     </div>
-  </section>
-
-  <section id="discord" class="fade-in">
+  </section>  <section id="discord" class="fade-in">
     <h2>Unser Discord</h2>
     <iframe src="https://discord.com/widget?id=259027595256004608&theme=dark"
       width="100%" height="400" allowtransparency="true" frameborder="0"
       sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
     </iframe>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
+  </section></main><!-- FOOTER --><footer>
   <p>&copy; 2025 Afterlife DayZ Community</p>
-</footer>
+</footer><!-- BACK TO TOP BUTTON --><button id="backToTop" title="Nach oben">▲</button>
 
-<!-- BACK TO TOP BUTTON -->
-<button id="backToTop" title="Nach oben">▲</button>
-
-<!-- SOCIAL BUTTONS LINKS MITTE -->
-<div class="social-buttons">
+<!-- SOCIAL BUTTONS --><div class="social-buttons">
   <a href="https://discord.gg/v7vHFVA5rV" target="_blank" title="Join Discord">
     <img src="assets/discord-button.png" alt="Discord Icon">
   </a>
   <a href="https://store.steampowered.com/" target="_blank" title="Unser Steam Profil">
     <img src="assets/steam-icon.png" alt="Steam Icon">
   </a>
-</div>
-
-<script>
-// Hamburger Menü
-document.getElementById('menuToggle').addEventListener('click', function () {
-  document.getElementById('menu').classList.toggle('open');
+</div><script>
+// Hamburger Menü Logik
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
 });
-</script>
 
-</body>
+// Navbar Transparenz beim Scrollen
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script></body>
 </html>
