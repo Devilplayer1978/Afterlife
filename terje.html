@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
   <script defer src="scripts/main.js"></script>
+  <style>
+    /* Sanfteres Auf- und Zuklappen */
+    .med-section {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .med-section.active {
+      opacity: 1;
+      transform: translateY(0);
+      max-height: 1500px; /* ausreichend Platz */
+    }
+  </style>
 </head>
 <body>
 
@@ -34,101 +50,122 @@
 
 <!-- MAIN CONTENT -->
 <main>
+
+  <!-- Terje Geschichte -->
   <section id="terje-story" class="fade-in">
     <h2>Die Geschichte von Terje</h2>
     <p>In den dunklen Tagen nach dem Ausbruch entwickelte Dr. Terje eine revolutionäre Medizin. Ihre Wirkung ist legendär – aber nicht ohne Risiko.</p>
   </section>
 
-  <section id="terje-heilmittel" class="fade-in">
+  <!-- Krankheiten -->
+  <section id="krankheiten-section" class="fade-in">
+    <h2>Krankheiten</h2>
+
+    <div class="button-grid">
+      <button class="med-button" data-target="hematome">Hämatome/Prellungen</button>
+      <button class="med-button" data-target="influenza">Influenza</button>
+      <button class="med-button" data-target="lebensmittel">Lebensmittelvergiftung</button>
+      <button class="med-button" data-target="schmerzen">Schmerzen</button>
+    </div>
+
+    <div id="hematome" class="med-section">
+      <div class="med-card">
+        <img src="assets/hematoms.png" alt="Hämatome">
+        <div class="med-info">
+          <h3>Hämatome/Prellungen</h3>
+          <p>Hämatome entstehen durch Schläge von Zombies oder anderen Überlebenden.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="influenza" class="med-section">
+      <div class="med-card">
+        <img src="assets/influenza.png" alt="Influenza">
+        <div class="med-info">
+          <h3>Influenza</h3>
+          <p>Erkältung in Form von Grippe, ausgelöst durch Nässe oder kalte Temperaturen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="lebensmittel" class="med-section">
+      <div class="med-card">
+        <img src="assets/FoodPoisioning.png" alt="Lebensmittelvergiftung">
+        <div class="med-info">
+          <h3>Lebensmittelvergiftung</h3>
+          <p>Verdorbene Nahrung führt zu starken Vergiftungen. Schnelle Behandlung nötig!</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="schmerzen" class="med-section">
+      <div class="med-card">
+        <img src="assets/pain.png" alt="Schmerzen">
+        <div class="med-info">
+          <h3>Schmerzen</h3>
+          <p>Entstehen oft nach Explosionen oder schweren Angriffen.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Heilmittel -->
+  <section id="heilmittel-section" class="fade-in">
     <h2>Verfügbare Heilmittel</h2>
 
     <div class="button-grid">
-      <button class="med-button" data-target="krankheiten">Krankheiten</button>
       <button class="med-button" data-target="salben">Salben</button>
       <button class="med-button" data-target="tabletten">Tabletten</button>
       <button class="med-button" data-target="phiolen">Phiolen & Injektoren</button>
     </div>
 
-    <!-- Krankheitsbereich -->
-    <div id="krankheiten" class="med-section">
-      <div class="med-card">
-        <img src="assets/hematoms.png" alt="Hämatome">
-        <div class="med-info">
-          <h3>Hämatome/Prellungen</h3>
-          <p>Hämatome entstehen durch Schläge von Zombies und anderen Überlebenden.</p>
-        </div>
-      </div>
-      <div class="med-card">
-        <img src="assets/influenza.png" alt="Influenza">
-        <div class="med-info">
-          <h3>Influenza</h3>
-          <p>Erkältung in Form von Grippe. Durch Nässe oder kaltes Wetter verursacht.</p>
-        </div>
-      </div>
-      <div class="med-card">
-        <img src="assets/FoodPoisioning.png" alt="Lebensmittelvergiftung">
-        <div class="med-info">
-          <h3>Lebensmittelvergiftung</h3>
-          <p>Verseuchtes oder verdorbenes Essen kann zu Vergiftungen führen. Schnelle Behandlung erforderlich!</p>
-        </div>
-      </div>
-      <div class="med-card">
-        <img src="assets/pain.png" alt="Schmerzen">
-        <div class="med-info">
-          <h3>Schmerzen</h3>
-          <p>Meist durch Schläge auf den Kopf oder Explosionen verursacht.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Salbenbereich -->
     <div id="salben" class="med-section">
       <div class="med-card">
-        <img src="assets/dummy-salbe.png" alt="Terje Salbe">
+        <img src="assets/dummy-salbe.png" alt="Terje-Salbe">
         <div class="med-info">
           <h3>Terje-Salbe</h3>
-          <p>Heilt kleine Wunden und Kratzer schnell. Direkt auftragen.</p>
+          <p>Heilt kleinere Verletzungen und beschleunigt die Regeneration.</p>
         </div>
       </div>
     </div>
 
-    <!-- Tablettenbereich -->
     <div id="tabletten" class="med-section">
       <div class="med-card">
         <img src="assets/dummy-tablette.png" alt="Antibiotika">
         <div class="med-info">
           <h3>Antibiotika</h3>
-          <p>Behandelt bakterielle Infektionen und stabilisiert den Patienten.</p>
+          <p>Wirksam gegen bakterielle Infektionen, verhindert Folgeerkrankungen.</p>
         </div>
       </div>
       <div class="med-card">
         <img src="assets/dummy-tablette.png" alt="Schmerzmittel">
         <div class="med-info">
           <h3>Schmerzmittel</h3>
-          <p>Reduziert Schmerzsymptome temporär, ohne die Ursache zu heilen.</p>
+          <p>Lindert akute Schmerzen und sorgt für Beweglichkeit.</p>
         </div>
       </div>
     </div>
 
-    <!-- Phiolenbereich -->
     <div id="phiolen" class="med-section">
       <div class="med-card">
         <img src="assets/dummy-phiole.png" alt="T-Serum">
         <div class="med-info">
           <h3>T-Serum</h3>
-          <p>Notfallbehandlung für Infektionen. Hochwirksam aber riskant.</p>
+          <p>Ultimative Behandlung gegen kritische Infektionen – Risiko hoch!</p>
         </div>
       </div>
       <div class="med-card">
         <img src="assets/dummy-phiole.png" alt="Regenerations-Injektion">
         <div class="med-info">
           <h3>Regenerations-Injektion</h3>
-          <p>Beschleunigt Zellregeneration. Nebenwirkungen möglich.</p>
+          <p>Erhöht die Zellneubildung drastisch für schnellere Heilung.</p>
         </div>
       </div>
     </div>
 
   </section>
+
 </main>
 
 <!-- FOOTER -->
@@ -149,21 +186,18 @@
   </a>
 </div>
 
-<!-- JavaScript zum Ein-/Ausklappen -->
+<!-- JavaScript zum Aufklappen -->
 <script>
 document.querySelectorAll('.med-button').forEach(button => {
   button.addEventListener('click', () => {
     const target = document.getElementById(button.dataset.target);
-    if (target.style.maxHeight) {
-      target.style.maxHeight = null;
-      target.style.opacity = 0;
+    if (target.classList.contains('active')) {
+      target.classList.remove('active');
     } else {
       document.querySelectorAll('.med-section').forEach(section => {
-        section.style.maxHeight = null;
-        section.style.opacity = 0;
+        section.classList.remove('active');
       });
-      target.style.maxHeight = target.scrollHeight + "px";
-      target.style.opacity = 1;
+      target.classList.add('active');
     }
   });
 });
