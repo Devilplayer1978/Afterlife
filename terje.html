@@ -59,6 +59,7 @@
       <button class="med-button" data-target="schmerzen">Schmerzen</button>
     </div>
 
+    <!-- Einzelne Krankheiten -->
     <div id="hematome" class="med-section">
       <div class="med-card">
         <img src="assets/hematoms.png" alt="Hämatome">
@@ -124,7 +125,7 @@
         <img src="assets/pain.png" alt="Schmerzen">
         <div class="med-info">
           <h3>Schmerzen</h3>
-          <p>Entstehen nach schweren Verletzungen oder Explosionen.</p>
+          <p>Entstehen oft nach Explosionen oder schweren Angriffen.</p>
         </div>
       </div>
     </div>
@@ -141,6 +142,7 @@
       <button class="med-button" data-target="phiolen">Phiolen & Injektoren</button>
     </div>
 
+    <!-- Einzelne Heilmittel -->
     <div id="salben" class="med-section">
       <div class="med-card">
         <img src="assets/dummy-salbe.png" alt="Terje-Salbe">
@@ -206,23 +208,6 @@
     <img src="assets/steam-icon.png" alt="Steam Icon">
   </a>
 </div>
-
-<!-- Script für das Auf- und Zuklappen -->
-<script>
-document.querySelectorAll('.med-button').forEach(button => {
-  button.addEventListener('click', () => {
-    const target = document.getElementById(button.dataset.target);
-    if (target.classList.contains('active')) {
-      target.classList.remove('active');
-    } else {
-      document.querySelectorAll('.med-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      target.classList.add('active');
-    }
-  });
-});
-</script>
 
 </body>
 </html>
