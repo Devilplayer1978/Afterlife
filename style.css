@@ -94,6 +94,47 @@ p {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* NAVIGATION - ROTER BUTTON STIL */
+.custom-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #111;
+  border-bottom: 2px solid #333;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background-color: #cc1a1a;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: 'Black Ops One', sans-serif;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff1a1a88;
+  transition: all 0.3s ease;
+}
+
+.nav-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-btn:hover {
+  background-color: #a50d0d;
+  box-shadow: 0 0 15px #ff1a1a;
+  transform: scale(1.05);
+}
+
+.nav-btn:active {
+  background-color: #900;
+  transform: scale(0.98);
+}
+
 /* SECTIONS */
 main section {
   padding: 4rem 2rem;
@@ -113,16 +154,6 @@ footer {
   background: #111;
   font-size: 0.9rem;
   color: #888;
-}
-
-/* STICKY NAVIGATION */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #111;
-  padding: 1rem 0;
-  border-bottom: 1px solid #222;
 }
 
 /* MOD-GRID STYLE */
