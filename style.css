@@ -94,38 +94,62 @@ p {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* NAVIGATION - BUTTONS */
-.custom-nav {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  background-color: #111;
-  border-bottom: 2px solid #333;
-}
-
-.nav-btn {
-  background: url('assets/blutiger-button2.png') no-repeat center center;
-  background-size: cover;
+/* NEUE NAVIGATION - LOGO & BURGER */
+.navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100px;
+  background: rgba(17, 17, 17, 0.95);
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-family: 'Black Ops One', sans-serif;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px black, 0 0 10px white;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 15px #ff1a1a88;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
 
-.nav-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 30px #ff1a1a;
+.navbar.scrolled {
+  background: rgba(17, 17, 17, 0.8);
+}
+
+.navbar-logo img {
+  height: 60px;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  height: 4px;
+  width: 30px;
+  background: white;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+/* HIDDEN MENU */
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: #111;
+  width: 100%;
+}
+
+.navbar-menu.active {
+  display: flex;
+}
+
+.navbar-menu a {
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 /* SECTIONS */
@@ -352,15 +376,16 @@ main section {
 
 /* MOBILE OPTIMIERUNG */
 @media (max-width: 768px) {
-  .custom-nav {
-    grid-template-columns: 1fr;
+  .navbar-toggle {
+    display: flex;
+  }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
   }
   .button-grid {
     grid-template-columns: 1fr;
-  }
-  .nav-btn {
-    height: 80px;
-    font-size: 1.2rem;
   }
   .social-buttons {
     display: none;
