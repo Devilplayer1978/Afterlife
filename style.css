@@ -94,12 +94,12 @@ p {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* NAVIGATION - BLUTIGE BUTTONS */
+/* NAVIGATION MIT BLUTIGEM BUTTON */
 .custom-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
   background-color: #111;
   border-bottom: 2px solid #333;
@@ -108,20 +108,21 @@ p {
 .nav-btn {
   background: url('assets/blutiger-button2.png') no-repeat center center;
   background-size: cover;
-  width: 180px;
-  height: 60px;
+  width: 240px;
+  height: 80px;
   border: none;
   cursor: pointer;
   font-family: 'Black Ops One', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px #ff1a1a88;
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 0 0 15px #ff1a1a88;
+  transition: all 0.3s ease;
 }
 
 .nav-btn a {
@@ -135,8 +136,8 @@ p {
 }
 
 .nav-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ff1a1a;
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #ff1a1a;
 }
 
 .nav-btn:active {
@@ -184,7 +185,7 @@ footer {
 
 .mod-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #ff1a1a88;
+  box-shadow: 0 0 20px #ff1a1a88;
 }
 
 .mod-card img {
@@ -195,7 +196,7 @@ footer {
 
 .mod-card h3 {
   margin: 1rem 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #f0f0f0;
 }
 
@@ -295,6 +296,15 @@ footer {
 
 /* MOBILE OPTIMIERUNG */
 @media (max-width: 768px) {
+  .custom-nav {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .nav-btn {
+    width: 150px;
+    height: 60px;
+    font-size: 1rem;
+  }
   .social-buttons {
     display: none;
   }
@@ -356,7 +366,7 @@ footer {
 .med-section.active {
   opacity: 1;
   transform: translateY(0);
-  max-height: 1500px; /* ausreichend Platz */
+  max-height: 1500px;
 }
 
 .med-card {
