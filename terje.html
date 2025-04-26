@@ -6,8 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Terje-Medizin - Afterlife DayZ</title>
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css?v=3" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
+
+  <!-- JavaScript -->
   <script defer src="scripts/main.js?v=3"></script>
 </head>
 
@@ -91,7 +94,7 @@
         <img src="assets/cut.png" alt="Schnittwunden">
         <div class="med-info">
           <h3>Schnittwunden</h3>
-          <p>Schnittwunden führen zu Blutungen und können Infektionen verursachen. Desinfizieren und verbinden!</p>
+          <p>Schnittwunden führen zu Blutungen und können Infektionen hervorrufen. Behandlung mit Bandagen erforderlich!</p>
         </div>
       </div>
     </div>
@@ -101,7 +104,7 @@
         <img src="assets/bullet.png" alt="Schusswunden">
         <div class="med-info">
           <h3>Schusswunden</h3>
-          <p>Schwere Blutungen. Operation oft unvermeidlich. Sofortige medizinische Versorgung nötig!</p>
+          <p>Schusswunden verursachen starke Blutungen. Operation dringend notwendig!</p>
         </div>
       </div>
     </div>
@@ -111,7 +114,7 @@
         <img src="assets/brain.png" alt="Gehirnerschütterung">
         <div class="med-info">
           <h3>Gehirnerschütterung</h3>
-          <p>Schwere Schläge auf den Kopf führen zu Bewusstseinsstörungen. Ruhe und Behandlung erforderlich!</p>
+          <p>Durch Schläge auf den Kopf verursachte Schäden. Ruhe und Beobachtung empfohlen.</p>
         </div>
       </div>
     </div>
@@ -121,7 +124,7 @@
         <img src="assets/pain.png" alt="Schmerzen">
         <div class="med-info">
           <h3>Schmerzen</h3>
-          <p>Entstehen oft nach Explosionen oder schweren Angriffen. Schmerzbehandlung wichtig!</p>
+          <p>Entstehen nach schweren Verletzungen oder Explosionen.</p>
         </div>
       </div>
     </div>
@@ -153,14 +156,14 @@
         <img src="assets/dummy-tablette.png" alt="Antibiotika">
         <div class="med-info">
           <h3>Antibiotika</h3>
-          <p>Wirksam gegen bakterielle Infektionen, verhindert Folgeerkrankungen.</p>
+          <p>Behandelt bakterielle Infektionen zuverlässig.</p>
         </div>
       </div>
       <div class="med-card">
         <img src="assets/dummy-tablette.png" alt="Schmerzmittel">
         <div class="med-info">
           <h3>Schmerzmittel</h3>
-          <p>Lindert akute Schmerzen und sorgt für Beweglichkeit.</p>
+          <p>Reduziert Schmerzen effektiv über mehrere Stunden.</p>
         </div>
       </div>
     </div>
@@ -170,14 +173,14 @@
         <img src="assets/dummy-phiole.png" alt="T-Serum">
         <div class="med-info">
           <h3>T-Serum</h3>
-          <p>Ultimative Behandlung gegen kritische Infektionen – Risiko hoch!</p>
+          <p>Ultimative Rettung bei Infektionen, jedoch mit Risiken.</p>
         </div>
       </div>
       <div class="med-card">
         <img src="assets/dummy-phiole.png" alt="Regenerations-Injektion">
         <div class="med-info">
           <h3>Regenerations-Injektion</h3>
-          <p>Erhöht die Zellneubildung drastisch für schnellere Heilung.</p>
+          <p>Stärkt die Zellheilung und beschleunigt den Heilungsprozess.</p>
         </div>
       </div>
     </div>
@@ -194,21 +197,27 @@
 <!-- BACK TO TOP BUTTON -->
 <button id="backToTop" title="Nach oben">▲</button>
 
-<!-- SOCIAL BUTTONS LINKS -->
+<!-- SOCIAL BUTTONS -->
 <div class="social-buttons">
-  <a href="https://discord.gg/v7vHFVA5rV" target="_blank"><img src="assets/discord-button.png" alt="Discord"></a>
-  <a href="https://store.steampowered.com/" target="_blank"><img src="assets/steam-icon.png" alt="Steam"></a>
+  <a href="https://discord.gg/v7vHFVA5rV" target="_blank" title="Join Discord">
+    <img src="assets/discord-button.png" alt="Discord Icon">
+  </a>
+  <a href="https://store.steampowered.com/" target="_blank" title="Unser Steam Profil">
+    <img src="assets/steam-icon.png" alt="Steam Icon">
+  </a>
 </div>
 
+<!-- Script für das Auf- und Zuklappen -->
 <script>
-// Buttons ein-/ausklappen
 document.querySelectorAll('.med-button').forEach(button => {
   button.addEventListener('click', () => {
     const target = document.getElementById(button.dataset.target);
     if (target.classList.contains('active')) {
       target.classList.remove('active');
     } else {
-      document.querySelectorAll('.med-section').forEach(section => section.classList.remove('active'));
+      document.querySelectorAll('.med-section').forEach(section => {
+        section.classList.remove('active');
+      });
       target.classList.add('active');
     }
   });
