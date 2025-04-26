@@ -29,7 +29,8 @@ p {
 
 /* HERO SECTION */
 .hero {
-  background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/background.webp') no-repeat center center fixed;
+  background: linear-gradient(to bottom, #000000cc, #000000f2),
+              url('assets/background.webp') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   color: #fff;
@@ -150,20 +151,6 @@ p {
   transition: all 0.3s ease;
 }
 
-.menu-toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-  background: #ff1a1a;
-}
-
-.menu-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-  background: #ff1a1a;
-}
-
 .menu {
   display: none;
   flex-direction: column;
@@ -204,103 +191,96 @@ p {
   box-shadow: 0 0 30px #ff1a1a;
 }
 
-/* SECTIONS */
-main section {
-  padding: 4rem 2rem;
-  background-color: #181818;
-  border-top: 1px solid #333;
-}
-
-/* MOD GRID */
-.mod-grid {
+/* BUTTON-GRID (KRANKHEITEN UND HEILMITTEL) */
+.button-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
-/* BACK TO TOP BUTTON */
-#backToTop {
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background-color: #ff1a1a;
-  color: #fff;
+.med-button {
+  background: url('assets/blutiger-button2.png') no-repeat center center;
+  background-size: cover;
   border: none;
-  padding: 15px 20px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #ff1a1a55;
-  transition: all 0.3s ease;
-}
-
-#backToTop:hover {
-  background-color: #cc0000;
-  box-shadow: 0 0 15px #ff1a1a;
-}
-
-/* PRELOADER */
-#preloader {
-  background: #0e0e0e;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #ff1a1a;
-  border-radius: 50%;
-  width: 80px;
   height: 80px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* SOCIAL BUTTONS */
-.social-buttons {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 100;
-}
-
-.social-buttons a {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border-radius: 50%;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 0 0 10px #ff1a1a88;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.social-buttons img {
-  width: 60px;
-  height: 60px;
+.med-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff1a1a;
 }
 
-/* SLIDE-IN */
+/* MED-SECTION */
+.med-section {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.8s ease, opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(-20px);
+  margin-top: 1rem;
+}
+
+.med-section.active {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1500px;
+}
+
+/* MED-CARD NEU (Bild links, Text rechts) */
+.med-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #222;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 10px #ff1a1a55;
+  transition: box-shadow 0.3s ease;
+}
+
+.med-card:hover {
+  box-shadow: 0 0 20px #ff1a1a88;
+}
+
+.med-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.med-card img:hover {
+  box-shadow: 0 0 15px red;
+}
+
+.med-info {
+  flex: 1;
+}
+
+.med-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff1a1a;
+}
+
+.med-info p {
+  margin: 0.5rem 0 0;
+  color: #ccc;
+}
+
+/* SLIDE-IN FADE */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -310,23 +290,6 @@ main section {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* TERJE - MEDIZIN BUTTONS */
-.med-section {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
-  margin-top: 1rem;
-}
-
-.med-section.active {
-  opacity: 1;
-  transform: translateY(0);
-  max-height: 1500px;
-  overflow: visible;
 }
 
 /* MOBILE */
@@ -340,5 +303,10 @@ main section {
   }
   .social-buttons {
     display: none;
+  }
+  .med-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
