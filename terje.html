@@ -7,10 +7,10 @@
   <title>Terje-Medizin - Afterlife DayZ</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
-
 </head>
+
 <body>
 
 <div id="preloader"><div class="loader"></div></div>
@@ -22,9 +22,7 @@
       <img src="assets/Logo.png" alt="Afterlife Logo" class="logo-glow" />
     </a>
     <button class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </div>
   <nav class="menu" id="menu">
@@ -47,6 +45,7 @@
 
 <!-- MAIN CONTENT -->
 <main>
+
   <!-- Terje Geschichte -->
   <section id="terje-story" class="fade-in">
     <h2>Die Geschichte von Terje</h2>
@@ -83,7 +82,7 @@
         <img src="assets/influenza.png" alt="Influenza">
         <div class="med-info">
           <h3>Influenza</h3>
-          <p>Erkältung in Form von Grippe, ausgelöst durch Nässe oder kalte Temperaturen.</p>
+          <p>Erkältung durch Kälte oder Nässe. Behandlung wichtig!</p>
         </div>
       </div>
     </div>
@@ -93,7 +92,7 @@
         <img src="assets/FoodPoisioning.png" alt="Lebensmittelvergiftung">
         <div class="med-info">
           <h3>Lebensmittelvergiftung</h3>
-          <p>Verdorbene Nahrung führt zu starken Vergiftungen. Schnelle Behandlung nötig!</p>
+          <p>Verdorbene Nahrung löst starke Übelkeit und Schwäche aus.</p>
         </div>
       </div>
     </div>
@@ -103,7 +102,7 @@
         <img src="assets/cut.png" alt="Schnittwunden">
         <div class="med-info">
           <h3>Schnittwunden</h3>
-          <p>Schnittwunden führen zu Blutungen und können Infektionen hervorrufen. Behandlung mit Bandagen erforderlich!</p>
+          <p>Gefährlich wegen Blutverlust und Infektion.</p>
         </div>
       </div>
     </div>
@@ -113,7 +112,7 @@
         <img src="assets/bullet.png" alt="Schusswunden">
         <div class="med-info">
           <h3>Schusswunden</h3>
-          <p>Schusswunden verursachen starke Blutungen. Operation dringend notwendig!</p>
+          <p>Hohe Blutungsgefahr, schnelle Versorgung erforderlich.</p>
         </div>
       </div>
     </div>
@@ -123,7 +122,7 @@
         <img src="assets/brain.png" alt="Gehirnerschütterung">
         <div class="med-info">
           <h3>Gehirnerschütterung</h3>
-          <p>Durch Schläge auf den Kopf verursachte Schäden. Ruhe und Beobachtung empfohlen.</p>
+          <p>Folgen von schweren Schlägen auf den Kopf, Ruhe ist wichtig!</p>
         </div>
       </div>
     </div>
@@ -133,12 +132,13 @@
         <img src="assets/pain.png" alt="Schmerzen">
         <div class="med-info">
           <h3>Schmerzen</h3>
-          <p>Entstehen oft nach Explosionen oder schweren Angriffen.</p>
+          <p>Entstehen nach schweren Verletzungen oder Explosionen.</p>
         </div>
       </div>
     </div>
 
   </section>
+
   <!-- Heilmittel -->
   <section id="heilmittel-section" class="fade-in">
     <h2>Verfügbare Heilmittel</h2>
@@ -155,41 +155,27 @@
         <img src="assets/dummy-salbe.png" alt="Terje-Salbe">
         <div class="med-info">
           <h3>Terje-Salbe</h3>
-          <p>Heilt kleinere Verletzungen und beschleunigt die Regeneration.</p>
+          <p>Heilt leichte Wunden und Prellungen schnell.</p>
         </div>
       </div>
     </div>
 
     <div id="tabletten" class="med-section">
       <div class="med-card">
-        <img src="assets/dummy-tablette.png" alt="Antibiotika">
+        <img src="assets/dummy-tablette.png" alt="Tabletten">
         <div class="med-info">
-          <h3>Antibiotika</h3>
-          <p>Behandelt bakterielle Infektionen zuverlässig.</p>
-        </div>
-      </div>
-      <div class="med-card">
-        <img src="assets/dummy-tablette.png" alt="Schmerzmittel">
-        <div class="med-info">
-          <h3>Schmerzmittel</h3>
-          <p>Reduziert Schmerzen effektiv über mehrere Stunden.</p>
+          <h3>Antibiotika & Schmerzmittel</h3>
+          <p>Bekämpft Infektionen und lindert Schmerzen.</p>
         </div>
       </div>
     </div>
 
     <div id="phiolen" class="med-section">
       <div class="med-card">
-        <img src="assets/dummy-phiole.png" alt="T-Serum">
+        <img src="assets/dummy-phiole.png" alt="Phiolen">
         <div class="med-info">
-          <h3>T-Serum</h3>
-          <p>Ultimative Rettung bei Infektionen, jedoch mit Risiken.</p>
-        </div>
-      </div>
-      <div class="med-card">
-        <img src="assets/dummy-phiole.png" alt="Regenerations-Injektion">
-        <div class="med-info">
-          <h3>Regenerations-Injektion</h3>
-          <p>Stärkt die Zellheilung und beschleunigt den Heilungsprozess.</p>
+          <h3>T-Serum & Regenerations-Injektion</h3>
+          <p>Stärkt die Körperheilung und schützt vor schweren Infektionen.</p>
         </div>
       </div>
     </div>
@@ -216,82 +202,63 @@
   </a>
 </div>
 
-<!-- JAVASCRIPT: Menü, Scroll, Preloader, Buttons -->
+<!-- SCRIPTS -->
 <script>
-// Alles erst NACH dem Laden ausführen
-window.addEventListener('DOMContentLoaded', () => {
-
-  // Hamburger Menü Logik
-  const menuToggle = document.getElementById('menuToggle');
-  const menu = document.getElementById('menu');
-  if (menuToggle && menu) {
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
-    });
-  }
-
-  // Navbar Transparenz beim Scrollen
-  window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-
-  // Button-Grid Aufklappfunktion für Krankheiten und Heilmittel
-  document.querySelectorAll('.med-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const target = document.getElementById(button.dataset.target);
-      if (target.classList.contains('active')) {
-        target.classList.remove('active');
-      } else {
-        document.querySelectorAll('.med-section').forEach(section => {
-          section.classList.remove('active');
-        });
-        target.classList.add('active');
-      }
-    });
-  });
-
-  // Preloader entfernen
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    preloader.style.opacity = '0';
-    preloader.style.pointerEvents = 'none';
-    setTimeout(() => {
-      preloader.remove();
-    }, 500);
-  }
-
-  // Back to Top Button
-  window.addEventListener('scroll', () => {
-    const backToTop = document.getElementById('backToTop');
-    if (window.scrollY > 300) {
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
-  });
-
-  document.getElementById('backToTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Fade-In Effekte
-  const fadeElements = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  fadeElements.forEach(element => observer.observe(element));
+// Menü Logik
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
 });
+
+// Scroll für Navbar
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Buttons Funktion
+document.querySelectorAll('.med-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const target = document.getElementById(button.dataset.target);
+    if (target.classList.contains('active')) {
+      target.classList.remove('active');
+    } else {
+      document.querySelectorAll('.med-section').forEach(section => section.classList.remove('active'));
+      target.classList.add('active');
+    }
+  });
+});
+
+// Preloader entfernen
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0';
+  preloader.style.pointerEvents = 'none';
+  setTimeout(() => preloader.remove(), 500);
+});
+
+// Back to Top Button
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Fade In Animation
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeElements.forEach(element => observer.observe(element));
 </script>
 
 </body>
