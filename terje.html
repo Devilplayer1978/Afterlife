@@ -174,35 +174,5 @@
   </a>
 </div>
 
-<!-- JavaScript -->
-<script>
-document.querySelectorAll('.med-button').forEach(button => {
-  button.addEventListener('click', () => {
-    const target = document.getElementById(button.dataset.target);
-    if (target.classList.contains('active')) {
-      target.classList.remove('active');
-    } else {
-      document.querySelectorAll('.med-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      target.classList.add('active');
-    }
-  });
-});
-
-// Back to Top
-const backToTopButton = document.getElementById("backToTop");
-window.onscroll = function() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-};
-backToTopButton.addEventListener("click", function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
-
 </body>
 </html>
