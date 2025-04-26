@@ -3,47 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Events - Afterlife DayZ</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=3" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
-  <script defer src="scripts/main.js"></script>
+
+  <!-- JavaScript -->
+  <script defer src="scripts/main.js?v=3"></script>
 </head>
+
 <body>
 
 <div id="preloader"><div class="loader"></div></div>
 
-<nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="about.html">Über Uns</a>
-  <a href="rules.html">Regeln</a>
-  <a href="changelog.html">Changelog</a>
-  <a href="events.html">Events</a>
-  <a href="terje.html">Terje-Medizin</a>
-</nav>
+<!-- NAVIGATION -->
+<div class="custom-nav">
+  <a class="nav-btn" href="index.html"><span>Home</span></a>
+  <a class="nav-btn" href="about.html"><span>Über Uns</span></a>
+  <a class="nav-btn" href="rules.html"><span>Regeln</span></a>
+  <a class="nav-btn" href="changelog.html"><span>Changelog</span></a>
+  <a class="nav-btn" href="events.html"><span>Events</span></a>
+  <a class="nav-btn" href="terje.html"><span>Terje-Medizin</span></a>
+</div>
 
-<section class="hero">
+<!-- HERO SECTION -->
+<section class="hero" style="background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/background.webp') no-repeat center center fixed; background-size: cover;">
   <div class="hero-content">
     <h1>Events</h1>
     <p>Was erwartet euch auf Afterlife DayZ?</p>
+    <div class="scroll-down">▼</div>
   </div>
 </section>
 
+<!-- MAIN CONTENT -->
 <main>
+
   <section class="fade-in">
     <h2>Geplante Events</h2>
-    <p>- Raid Nights: Jeden Samstag 20 Uhr.<br>
-       - RP-Event: Überlebenden Konvoi (Termine folgen).<br>
-       - PvP Turnier: 1v1 Arena Duelle.</p>
+    <p>
+      - Raid Nights: Jeden Samstag 20 Uhr.<br>
+      - RP-Event: Überlebenden Konvoi (Termine folgen).<br>
+      - PvP Turnier: 1v1 Arena Duelle.
+    </p>
   </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
   <p>&copy; 2025 Afterlife DayZ Community</p>
 </footer>
 
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" title="Nach oben">▲</button>
+
+<!-- SOCIAL BUTTONS LINKS MITTE -->
 <div class="social-buttons">
-  <a href="https://discord.gg/v7vHFVA5rV" target="_blank"><img src="assets/discord-button.png" alt="Discord Icon"></a>
-  <a href="https://store.steampowered.com/" target="_blank"><img src="assets/steam-icon.png" alt="Steam Icon"></a>
+  <a href="https://discord.gg/v7vHFVA5rV" target="_blank" title="Join Discord">
+    <img src="assets/discord-button.png" alt="Discord Icon">
+  </a>
+  <a href="https://store.steampowered.com/" target="_blank" title="Unser Steam Profil">
+    <img src="assets/steam-icon.png" alt="Steam Icon">
+  </a>
 </div>
 
 </body>
