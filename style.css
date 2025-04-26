@@ -392,12 +392,12 @@ footer {
   color: #ccc;
 }
 
-/* RESPONSIVE: MOBILE OPTIMIERUNG */
+/* RESPONSIVE: MOBILE ANPASSUNG */
 @media (max-width: 768px) {
-  .button-grid {
+  .custom-nav {
     grid-template-columns: 1fr;
   }
-  .custom-nav {
+  .button-grid {
     grid-template-columns: 1fr;
   }
   .nav-btn {
