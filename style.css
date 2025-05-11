@@ -351,4 +351,13 @@ p {
 .med-table tr:hover {
   background-color: #2a2a2a;
 }
+.med-section {
+  display: flex;
+  justify-content: center; /* Zentriert horizontal */
+  margin-top: 2rem;
+}
 
+.med-card {
+  max-width: 800px;         /* Optional: Begrenze Breite */
+  width: 100%;
+}
