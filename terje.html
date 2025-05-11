@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 <div id="preloader"><div class="loader"></div></div>
 
 <!-- NAVIGATION -->
@@ -42,48 +43,66 @@
   </div>
 </section>
 
-<!-- MAIN CONTENT -->
 <main>
-  <section id="heilmittel-section" class="fade-in">
-    <h2>Die Medizin</h2>
-    <p>Arzneimittel werden in drei Kategorien unterteilt: Tabletten, Ampullen und Injektoren.</p>
-    <p>Tabletten werden in der Regel in den frühen Stadien der Krankheit und zur Vorbeugung verwendet...</p>
 
-    <!-- Medikamenten-Tabelle -->
-    <div class="med-table-wrapper">
-      <table class="med-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Item</th>
-            <th>Stufe</th>
-            <th>Level</th>
-            <th>Form</th>
-            <th>Dauer (s)</th>
-            <th>Überdosis</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Tetracycline</td><td>TetracyclineAntibiotics</td><td>Behandlung</td><td>1</td><td>Tabletten</td><td>300</td><td>0.45</td></tr>
-          <tr><td>Paracetamol</td><td>TerjePillsParacetamol</td><td>Behandlung</td><td>1</td><td>Tabletten</td><td>200</td><td>0.45</td></tr>
-          <tr><td>Amibaktam</td><td>TerjePillsAmibaktam</td><td>Behandlung</td><td>1</td><td>Tabletten</td><td>60</td><td>0.05</td></tr>
-          <tr><td>Ibuprofen</td><td>TerjePillsIbuprofen</td><td>Behandlung</td><td>2</td><td>Tabletten</td><td>300</td><td>0.35</td></tr>
-          <tr><td>Nurofen</td><td>TerjePillsNurofen</td><td>Behandlung</td><td>2</td><td>Tabletten</td><td>300</td><td>0.52</td></tr>
-          <tr><td>Amoxiclav</td><td>TerjePillsAmoxiclav</td><td>Behandlung</td><td>2</td><td>Tabletten</td><td>1200</td><td>0.75</td></tr>
-          <tr><td>Piperacillin</td><td>TerjePillsPiperacylin</td><td>Behandlung</td><td>2</td><td>Tabletten</td><td>1100</td><td>0.45</td></tr>
-          <tr><td>Ketarol</td><td>TerjeAmpouleKetarol</td><td>Behandlung</td><td>2</td><td>Ampulle</td><td>1200</td><td>0.5</td></tr>
-          <tr><td>Amoxivan</td><td>TerjeAmpouleAmoxivan</td><td>Behandlung</td><td>2</td><td>Ampulle</td><td>900</td><td>0.3</td></tr>
-          <tr><td>Topoisomerase</td><td>TerjeInjectorTopoizomeraza</td><td>Behandlung</td><td>3</td><td>Injektor</td><td>900</td><td>0.65</td></tr>
-          <tr><td>Imipenem</td><td>TerjeAmpouleImipenem</td><td>Behandlung</td><td>3</td><td>Ampulle</td><td>900</td><td>0.7</td></tr>
-          <tr><td>Flemoclave</td><td>TerjeAmpouleFlemoclav</td><td>Behandlung</td><td>3</td><td>Ampulle</td><td>1200</td><td>0.8</td></tr>
-          <tr><td>Amoxiclav</td><td>TerjeInjectorAmoxiclav</td><td>Behandlung</td><td>3</td><td>Injektor</td><td>1800</td><td>0.6</td></tr>
-          <tr><td>Vaxicam</td><td>TerjeAmpouleVaxicam</td><td>Impfung</td><td>-</td><td>Ampulle</td><td>14400</td><td>0.8</td></tr>
-        </tbody>
-      </table>
+  <!-- Krankheiten -->
+  <section id="krankheiten-section" class="fade-in">
+    <h2>Krankheiten</h2>
+
+    <div class="button-grid">
+      <button class="med-button" data-target="hematome">Hämatome/Prellungen</button>
+      <button class="med-button" data-target="influenza">Influenza</button>
+      <button class="med-button" data-target="lebensmittel">Lebensmittelvergiftung</button>
+      <button class="med-button" data-target="schnittwunden">Schnittwunden</button>
+      <button class="med-button" data-target="schusswunden">Schusswunden</button>
+      <button class="med-button" data-target="gehirnerschuetterung">Gehirnerschütterung</button>
+      <button class="med-button" data-target="schmerzen">Schmerzen</button>
     </div>
-    <!-- ENDE Tabelle -->
 
+    <!-- Einzelne Krankheiten -->
+    <!-- ... deine bestehenden <div id="hematome" ...> etc. folgen hier wie gehabt ... -->
   </section>
+
+  <!-- Medikamenten-Tabelle als aufklappbarer Abschnitt -->
+  <section class="fade-in">
+    <h2>Medikamenten-Datenbank</h2>
+    <button class="med-button" data-target="medicine-table">Tabelle anzeigen</button>
+
+    <div id="medicine-table" class="med-section">
+      <div class="med-card" style="overflow-x:auto;">
+        <table style="width: 100%; border-collapse: collapse; color: #fff;">
+          <thead style="background-color: #222;">
+            <tr>
+              <th>Name</th>
+              <th>Item</th>
+              <th>Stage</th>
+              <th>Level</th>
+              <th>Form</th>
+              <th>Dauer (s)</th>
+              <th>Overdose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Tetracycline</td><td>TetracyclineAntibiotics</td><td>Treatment</td><td>1</td><td>Tablets</td><td>300</td><td>0.45</td></tr>
+            <tr><td>Paracetamol</td><td>TerjePillsParacetamol</td><td>Treatment</td><td>1</td><td>Tablets</td><td>200</td><td>0.45</td></tr>
+            <tr><td>Amibaktam</td><td>TerjePillsAmibaktam</td><td>Treatment</td><td>1</td><td>Tablets</td><td>60</td><td>0.05</td></tr>
+            <tr><td>Ibuprofen</td><td>TerjePillsIbuprofen</td><td>Treatment</td><td>2</td><td>Tablets</td><td>300</td><td>0.35</td></tr>
+            <tr><td>Nurofen</td><td>TerjePillsNurofen</td><td>Treatment</td><td>2</td><td>Tablets</td><td>300</td><td>0.52</td></tr>
+            <tr><td>Amoxiclav</td><td>TerjePillsAmoxiclav</td><td>Treatment</td><td>2</td><td>Tablets</td><td>1200</td><td>0.75</td></tr>
+            <tr><td>Piperacillin</td><td>TerjePillsPiperacylin</td><td>Treatment</td><td>2</td><td>Tablets</td><td>1100</td><td>0.45</td></tr>
+            <tr><td>Ketarol</td><td>TerjeAmpouleKetarol</td><td>Treatment</td><td>2</td><td>Ampoule</td><td>1200</td><td>0.5</td></tr>
+            <tr><td>Amoxivan</td><td>TerjeAmpouleAmoxivan</td><td>Treatment</td><td>2</td><td>Ampoule</td><td>900</td><td>0.3</td></tr>
+            <tr><td>Topoisomerase</td><td>TerjeInjectorTopoizomeraza</td><td>Treatment</td><td>3</td><td>Injector</td><td>900</td><td>0.65</td></tr>
+            <tr><td>Imipenem</td><td>TerjeAmpouleImipenem</td><td>Treatment</td><td>3</td><td>Ampoule</td><td>900</td><td>0.7</td></tr>
+            <tr><td>Flemoclave</td><td>TerjeAmpouleFlemoclav</td><td>Treatment</td><td>3</td><td>Ampoule</td><td>1200</td><td>0.8</td></tr>
+            <tr><td>Amoxiclav</td><td>TerjeInjectorAmoxiclav</td><td>Treatment</td><td>3</td><td>Injector</td><td>1800</td><td>0.6</td></tr>
+            <tr><td>Vaxicam</td><td>TerjeAmpouleVaxicam</td><td>Vaccine</td><td>-</td><td>Ampoule</td><td>14400</td><td>0.8</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- FOOTER -->
@@ -96,53 +115,68 @@
 
 <!-- SOCIAL BUTTONS -->
 <div class="social-buttons">
-  <a href="https://discord.gg/v7vHFVA5rV" target="_blank"><img src="assets/discord-button.png" alt="Discord Icon"></a>
-  <a href="https://store.steampowered.com/" target="_blank"><img src="assets/steam-icon.png" alt="Steam Icon"></a>
+  <a href="https://discord.gg/v7vHFVA5rV" target="_blank" title="Join Discord">
+    <img src="assets/discord-button.png" alt="Discord Icon">
+  </a>
+  <a href="https://store.steampowered.com/" target="_blank" title="Unser Steam Profil">
+    <img src="assets/steam-icon.png" alt="Steam Icon">
+  </a>
 </div>
 
-<!-- SCRIPT -->
+<!-- SCRIPTS -->
 <script>
-  const menuToggle = document.getElementById('menuToggle');
-  const menu = document.getElementById('menu');
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
-  });
+// Menü
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('menu').classList.toggle('open');
+});
 
-  window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-    document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
-  });
+// Navbar Scroll
+window.addEventListener('scroll', () => {
+  document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
 
-  document.getElementById('backToTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  document.querySelectorAll('.med-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const target = document.getElementById(button.dataset.target);
+// Med-Buttons
+document.querySelectorAll('.med-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const target = document.getElementById(button.dataset.target);
+    if (target.classList.contains('active')) {
+      target.classList.remove('active');
+    } else {
       document.querySelectorAll('.med-section').forEach(section => section.classList.remove('active'));
       target.classList.add('active');
-    });
+    }
   });
+});
 
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0';
-    preloader.style.pointerEvents = 'none';
-    setTimeout(() => preloader.remove(), 500);
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0';
+  preloader.style.pointerEvents = 'none';
+  setTimeout(() => preloader.remove(), 500);
+});
+
+// Back to top
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Fade-In Effekt
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
   });
-
-  const fadeElements = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  fadeElements.forEach(element => observer.observe(element));
+}, { threshold: 0.1 });
+fadeElements.forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
