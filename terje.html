@@ -1,4 +1,3 @@
-<!-- Zu lang für ein einzelnes Stück, ich werde dir den Code in mehreren direkt aufeinanderfolgenden Teilen liefern. Hier folgt Teil 1: -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,13 +7,15 @@
   <title>Terje-Medizin - Afterlife DayZ</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=6" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+
 <div id="preloader"><div class="loader"></div></div>
 
+<!-- NAVIGATION -->
 <header class="navbar">
   <div class="navbar-container">
     <a href="index.html" class="logo">
@@ -34,6 +35,7 @@
   </nav>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero" style="background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/medicine.png') no-repeat center center fixed; background-size: cover;">
   <div class="hero-content">
     <h1>Terje-Medizin</h1>
@@ -41,11 +43,15 @@
   </div>
 </section>
 
+<!-- MAIN CONTENT -->
 <main>
+
+  <!-- Terje Geschichte -->
   <section id="terje-story" class="fade-in">
     <h2>Die Geschichte von Terje</h2>
     <p>In den dunklen Tagen nach dem Ausbruch entwickelte Dr. Terje eine revolutionäre Medizin. Ihre Wirkung ist legendär – aber nicht ohne Risiko.</p>
   </section>
+
   <!-- Krankheiten -->
   <section id="krankheiten-section" class="fade-in">
     <h2>Krankheiten</h2>
@@ -60,31 +66,116 @@
       <button class="med-button" data-target="schmerzen">Schmerzen</button>
     </div>
 
-    <!-- Beispielhafte Krankheit -->
+    <!-- Einzelne Krankheiten -->
     <div id="hematome" class="med-section">
       <div class="med-card">
         <img src="assets/hematoms.png" alt="Hämatome">
         <div class="med-info">
-          <h3>Hämatome/Prellungen</h3>
-          <p>Hämatome entstehen durch stumpfe Gewalt. Salben fördern die Heilung.</p>
+          <center><h3>Hämatome/Prellungen</h3></center>
+          <center><p>Hämatome können auftreten, wenn Sie von einem Zombie getroffen oder mit stumpfen Waffen geschlagen werden. <br>
+            Wenn zahlreiche Hämatome vorhanden sind, beginnt sich Ihre Gesundheit zu verschlechtern. Obwohl sie mit der Zeit auf natürliche Weise heilen, kann das Auftragen von Salben den Heilungsprozess beschleunigen.</p></center>
         </div>
       </div>
     </div>
-    <!-- Wiederhole für weitere Krankheiten (influenza, lebensmittel, usw.) wie im vorherigen Code -->
+
+    <div id="influenza" class="med-section">
+      <div class="med-card">
+        <img src="assets/influenza.png" alt="Influenza">
+        <div class="med-info">
+          <h3>Influenza</h3>
+          <p>Sie können sich eine Erkältung oder Grippe einfangen, wenn Sie längere Zeit kalten Temperaturen ausgesetzt sind.<br> 
+            Ohne die richtige Behandlung kann eine leichte Erkältung fortschreiten und sich schließlich zu einer Lungenentzündung entwickeln.<br> 
+            Wenn du an einer Lungenentzündung leidest, verliert dein Charakter langsam an Gesundheit.<br> 
+            Behandeln Sie es mit Antibiotika auf dem gleichen oder einem höheren Niveau, wobei für eine vollständige Genesung oft mehrere Dosen erforderlich sind.<br> 
+            Eine milde Erkältung kann geheilt werden, indem man sich an einem warmen Ort ausruht.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="lebensmittel" class="med-section">
+      <div class="med-card">
+        <img src="assets/FoodPoisioning.png" alt="Lebensmittelvergiftung">
+        <div class="med-info">
+          <h3>Lebensmittelvergiftung</h3>
+          <p>Eine Lebensmittelvergiftung kann durch den Verzehr von verdorbenen oder ungekochten Lebensmitteln, faulen Früchten, giftigen Pilzen, schmutzigem Wasser oder versehentlichem Verschlucken von Substanzen wie Benzin entstehen.<br> 
+            Symptome wie Übelkeit und Erbrechen treten schnell nach dem Verzehr auf. Unbehandelt kann sich der Zustand verschlimmern, was zu Dehydrierung und allmählichem Gesundheitsverlust führt.<br> 
+            Bei der Behandlung wird viel Wasser getrunken und bestimmte Medikamente eingenommen, um die Symptome zu lindern.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="schnittwunden" class="med-section">
+      <div class="med-card">
+        <img src="assets/cut.png" alt="Schnittwunden">
+        <div class="med-info">
+          <h3>Schnittwunden</h3>
+          <p>Ein Spieler kann eine Schnittwunde durch scharfe Waffen erleiden, die schwere Blutungen verursachen können und einen sofortigen Verband erfordern.<br> 
+            Hämostatische Verbände sind wirksamer als normale Verbände oder Tücher. Nach dem Verband kann die Wunde weiter leicht bluten, bis der Fremdkörper operativ entfernt wird.</p> 
+        </div>
+      </div>
+    </div>
+
+    <div id="schusswunden" class="med-section">
+      <div class="med-card">
+        <img src="assets/bullet.png" alt="Schusswunden">
+        <div class="med-info">
+          <h3>Schusswunden</h3>
+          <p>Ein Spieler kann eine Schusswunde durch Schusswaffen erleiden, die schwere Blutungen verursachen können und einen sofortigen Verband erfordern.<br> 
+            Hämostatische Verbände sind wirksamer als normale Verbände oder Tücher. Nach dem Verband kann die Wunde weiter leicht bluten, bis der Fremdkörper operativ entfernt wird.<br> 
+            In schwereren Fällen können diese Wunden zu Verletzungen der inneren Organe führen, die tiefer und schwieriger zu behandeln sind.<br> 
+            Eine gut gepflegte kugelsichere Weste kann vor Schusswunden schützen, und ihre Wirksamkeit wird durch die ballistische Stärke der Weste bestimmt.<br> 
+            Leichte Westen können kleinkalibrige Geschosse blockieren, sind aber gegen mittlere und große Kaliber unwirksam.<br> 
+            Wenn die Weste die Kugel erfolgreich abwehrt, erleidet der Spieler immer noch eine ungepanzerte Wunde in Form eines Hämatoms.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="gehirnerschuetterung" class="med-section">
+      <div class="med-card">
+        <img src="assets/brain.png" alt="Gehirnerschütterung">
+        <div class="med-info">
+          <h3>Gehirnerschütterung</h3>
+          <p>Eine Gehirnerschütterung kann durch einen starken Schlag auf den Kopf mit einem stumpfen Gegenstand, eine Explosion in der Nähe der Figur oder einen kleinkalibrigen Kugeleinschlag beim Tragen eines ballistischen Helms entstehen.<br> 
+            Zu den ersten Symptomen gehören Kopfschmerzen, Schwindel, instabile Koordination und verschwommenes Sehen, die alle die Bewegung und die Wirksamkeit der Bekämpfung beeinträchtigen können.<br> 
+            Während eine Gehirnerschütterung nach und nach von selbst abklingt, kann die Genesung mit speziellen Medikamenten beschleunigt werden, die die Schwere der Symptome verringern.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="schmerzen" class="med-section">
+      <div class="med-card">
+        <img src="assets/pain.png" alt="Schmerzen">
+        <div class="med-info">
+          <h3>Schmerzen</h3>
+          <p>Schmerzen entstehen durch verschiedene Verletzungen, deren Intensität von der Schwere des Traumas abhängt.<br> 
+            Obwohl die Schmerzen mit der Zeit allmählich von selbst nachlassen, können sie durch die Einnahme von Schmerzmitteln in der entsprechenden Höhe oder höher schneller gelindert werden.</p>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- Heilmittel -->
   <section id="heilmittel-section" class="fade-in">
     <h2>Die Medizin</h2>
-    <p>Information über Tabletten, Ampullen, Injektoren usw.</p>
+    <p>Arzneimittel werden in drei Kategorien unterteilt: Tabletten, Ampullen und Injektoren.</p>
+
+    <p>Tabletten werden in der Regel in den frühen Stadien der Krankheit und zur Vorbeugung verwendet, wobei jede Packung zehn Tabletten enthält, und Packungen des gleichen Typs können kombiniert werden.</p>
+
+    <p>Ampullen enthalten wirksame Medikamente zur Behandlung komplexer Krankheiten oder Krankheiten in mittleren bis schweren Stadien, bei denen die Spieler eine Spritze zur Verabreichung verwenden müssen.</p>
+
+    <p>Nach jeder Injektion wird die Spritze kontaminiert und muss mit Alkohol desinfiziert oder in einem Topf mit Wasser über einem Feuer gekocht werden.</p>
+
+    <p>Injektoren funktionieren ähnlich wie Ampullen, benötigen aber keine Spritzen, da alle Injektoren Einwegartikel sind.</p>
+
 
     <div class="button-grid">
       <button class="med-button" data-target="salben">Salben</button>
       <button class="med-button" data-target="tabletten">Tabletten</button>
       <button class="med-button" data-target="phiolen">Phiolen & Injektoren</button>
-      <button class="med-button" data-target="medikamenten-tabelle">Medikamenten-Tabelle</button>
     </div>
 
+    <!-- Einzelne Heilmittel -->
     <div id="salben" class="med-section">
       <div class="med-card">
         <img src="assets/dummy-salbe.png" alt="Terje-Salbe">
@@ -107,7 +198,7 @@
 
     <div id="phiolen" class="med-section">
       <div class="med-card">
-        <img src="assets/dummy-phiole.png" alt="Injektoren">
+        <img src="assets/dummy-phiole.png" alt="Phiolen">
         <div class="med-info">
           <h3>T-Serum & Regenerations-Injektion</h3>
           <p>Stärkt die Körperheilung und schützt vor schweren Infektionen.</p>
@@ -115,37 +206,10 @@
       </div>
     </div>
 
-    <!-- Medikamenten-Tabelle -->
-    <div id="medikamenten-tabelle" class="med-section">
-      <div style="overflow-x: auto; max-width: 1000px; margin: 0 auto;">
-        <table style="width:100%; border-collapse: collapse; text-align: center;">
-          <thead>
-            <tr style="background-color:#222; color:#ff1a1a;">
-              <th>Name</th><th>Item</th><th>Stage</th><th>Level</th><th>Form</th><th>Dauer (s)</th><th>Überdosis</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Tetracycline</td><td>TetracyclineAntibiotics</td><td>Treatment</td><td>1</td><td>Tabletten</td><td>300</td><td>0.45</td></tr>
-            <tr><td>Paracetamol</td><td>TerjePillsParacetamol</td><td>Treatment</td><td>1</td><td>Tabletten</td><td>200</td><td>0.45</td></tr>
-            <tr><td>Amibaktam</td><td>TerjePillsAmibaktam</td><td>Treatment</td><td>1</td><td>Tabletten</td><td>60</td><td>0.05</td></tr>
-            <tr><td>Ibuprofen</td><td>TerjePillsIbuprofen</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>300</td><td>0.35</td></tr>
-            <tr><td>Nurofen</td><td>TerjePillsNurofen</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>300</td><td>0.52</td></tr>
-            <tr><td>Amoxiclav</td><td>TerjePillsAmoxiclav</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>1200</td><td>0.75</td></tr>
-            <tr><td>Piperacillin</td><td>TerjePillsPiperacylin</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>1100</td><td>0.45</td></tr>
-            <tr><td>Ketarol</td><td>TerjeAmpouleKetarol</td><td>Treatment</td><td>2</td><td>Ampulle</td><td>1200</td><td>0.5</td></tr>
-            <tr><td>Amoxivan</td><td>TerjeAmpouleAmoxivan</td><td>Treatment</td><td>2</td><td>Ampulle</td><td>900</td><td>0.3</td></tr>
-            <tr><td>Topoisomerase</td><td>TerjeInjectorTopoizomeraza</td><td>Treatment</td><td>3</td><td>Injektor</td><td>900</td><td>0.65</td></tr>
-            <tr><td>Imipenem</td><td>TerjeAmpouleImipenem</td><td>Treatment</td><td>3</td><td>Ampulle</td><td>900</td><td>0.7</td></tr>
-            <tr><td>Flemoclave</td><td>TerjeAmpouleFlemoclav</td><td>Treatment</td><td>3</td><td>Ampulle</td><td>1200</td><td>0.8</td></tr>
-            <tr><td>Amoxiclav</td><td>TerjeInjectorAmoxiclav</td><td>Treatment</td><td>3</td><td>Injektor</td><td>1800</td><td>0.6</td></tr>
-            <tr><td>Vaxicam</td><td>TerjeAmpouleVaxicam</td><td>Vaccine</td><td>-</td><td>Ampulle</td><td>14400</td><td>0.8</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   </section>
+
 </main>
-  
+
 <!-- FOOTER -->
 <footer>
   <p>&copy; 2025 Afterlife DayZ Community</p>
@@ -166,20 +230,20 @@
 
 <!-- SCRIPTS -->
 <script>
-// Menü Toggle
+// Menü Logik
 const menuToggle = document.getElementById('menuToggle');
 const menu = document.getElementById('menu');
 menuToggle.addEventListener('click', () => {
   menu.classList.toggle('open');
 });
 
-// Navbar Scroll-Effekt
+// Scroll für Navbar
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Button-Funktion für med-section & Tabelle
+// Buttons Funktion
 document.querySelectorAll('.med-button').forEach(button => {
   button.addEventListener('click', () => {
     const target = document.getElementById(button.dataset.target);
@@ -192,17 +256,15 @@ document.querySelectorAll('.med-button').forEach(button => {
   });
 });
 
-// Preloader ausblenden
+// Preloader entfernen
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
-  if (preloader) {
-    preloader.style.opacity = '0';
-    preloader.style.pointerEvents = 'none';
-    setTimeout(() => preloader.remove(), 500);
-  }
+  preloader.style.opacity = '0';
+  preloader.style.pointerEvents = 'none';
+  setTimeout(() => preloader.remove(), 500);
 });
 
-// Back to Top
+// Back to Top Button
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
   backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
@@ -211,7 +273,7 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Fade-In Animationen
+// Fade In Animation
 const fadeElements = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
