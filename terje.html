@@ -1,3 +1,4 @@
+<!-- Zu lang für ein einzelnes Stück, ich werde dir den Code in mehreren direkt aufeinanderfolgenden Teilen liefern. Hier folgt Teil 1: -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,15 +8,13 @@
   <title>Terje-Medizin - Afterlife DayZ</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-
 <div id="preloader"><div class="loader"></div></div>
 
-<!-- NAVIGATION -->
 <header class="navbar">
   <div class="navbar-container">
     <a href="index.html" class="logo">
@@ -35,7 +34,6 @@
   </nav>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero" style="background: linear-gradient(to bottom, #000000cc, #000000f2), url('assets/medicine.png') no-repeat center center fixed; background-size: cover;">
   <div class="hero-content">
     <h1>Terje-Medizin</h1>
@@ -44,7 +42,10 @@
 </section>
 
 <main>
-
+  <section id="terje-story" class="fade-in">
+    <h2>Die Geschichte von Terje</h2>
+    <p>In den dunklen Tagen nach dem Ausbruch entwickelte Dr. Terje eine revolutionäre Medizin. Ihre Wirkung ist legendär – aber nicht ohne Risiko.</p>
+  </section>
   <!-- Krankheiten -->
   <section id="krankheiten-section" class="fade-in">
     <h2>Krankheiten</h2>
@@ -59,52 +60,92 @@
       <button class="med-button" data-target="schmerzen">Schmerzen</button>
     </div>
 
-    <!-- Einzelne Krankheiten -->
-    <!-- ... deine bestehenden <div id="hematome" ...> etc. folgen hier wie gehabt ... -->
+    <!-- Beispielhafte Krankheit -->
+    <div id="hematome" class="med-section">
+      <div class="med-card">
+        <img src="assets/hematoms.png" alt="Hämatome">
+        <div class="med-info">
+          <h3>Hämatome/Prellungen</h3>
+          <p>Hämatome entstehen durch stumpfe Gewalt. Salben fördern die Heilung.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Wiederhole für weitere Krankheiten (influenza, lebensmittel, usw.) wie im vorherigen Code -->
   </section>
 
-  <!-- Medikamenten-Tabelle als aufklappbarer Abschnitt -->
-  <section class="fade-in">
-    <h2>Medikamenten-Datenbank</h2>
-    <button class="med-button" data-target="medicine-table">Influenza-Medicals</button>
+  <!-- Heilmittel -->
+  <section id="heilmittel-section" class="fade-in">
+    <h2>Die Medizin</h2>
+    <p>Information über Tabletten, Ampullen, Injektoren usw.</p>
 
-    <div id="medicine-table" class="med-section">
-      <div class="med-card" style="overflow-x:auto;">
-        <table style="width: 100%; border-collapse: collapse; color: #fff;">
-          <thead style="background-color: #222;">
-            <tr>
-              <th>Name</th>
-              <th>Item</th>
-              <th>Stage</th>
-              <th>Level</th>
-              <th>Form</th>
-              <th>Dauer (s)</th>
-              <th>Overdose</th>
+    <div class="button-grid">
+      <button class="med-button" data-target="salben">Salben</button>
+      <button class="med-button" data-target="tabletten">Tabletten</button>
+      <button class="med-button" data-target="phiolen">Phiolen & Injektoren</button>
+      <button class="med-button" data-target="medikamenten-tabelle">Medikamenten-Tabelle</button>
+    </div>
+
+    <div id="salben" class="med-section">
+      <div class="med-card">
+        <img src="assets/dummy-salbe.png" alt="Terje-Salbe">
+        <div class="med-info">
+          <h3>Terje-Salbe</h3>
+          <p>Heilt leichte Wunden und Prellungen schnell.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="tabletten" class="med-section">
+      <div class="med-card">
+        <img src="assets/dummy-tablette.png" alt="Tabletten">
+        <div class="med-info">
+          <h3>Antibiotika & Schmerzmittel</h3>
+          <p>Bekämpft Infektionen und lindert Schmerzen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="phiolen" class="med-section">
+      <div class="med-card">
+        <img src="assets/dummy-phiole.png" alt="Injektoren">
+        <div class="med-info">
+          <h3>T-Serum & Regenerations-Injektion</h3>
+          <p>Stärkt die Körperheilung und schützt vor schweren Infektionen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medikamenten-Tabelle -->
+    <div id="medikamenten-tabelle" class="med-section">
+      <div style="overflow-x: auto; max-width: 1000px; margin: 0 auto;">
+        <table style="width:100%; border-collapse: collapse; text-align: center;">
+          <thead>
+            <tr style="background-color:#222; color:#ff1a1a;">
+              <th>Name</th><th>Item</th><th>Stage</th><th>Level</th><th>Form</th><th>Dauer (s)</th><th>Überdosis</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Tetracycline</td><td>TetracyclineAntibiotics</td><td>Treatment</td><td>1</td><td>Tablets</td><td>300</td><td>0.45</td></tr>
-            <tr><td>Paracetamol</td><td>TerjePillsParacetamol</td><td>Treatment</td><td>1</td><td>Tablets</td><td>200</td><td>0.45</td></tr>
-            <tr><td>Amibaktam</td><td>TerjePillsAmibaktam</td><td>Treatment</td><td>1</td><td>Tablets</td><td>60</td><td>0.05</td></tr>
-            <tr><td>Ibuprofen</td><td>TerjePillsIbuprofen</td><td>Treatment</td><td>2</td><td>Tablets</td><td>300</td><td>0.35</td></tr>
-            <tr><td>Nurofen</td><td>TerjePillsNurofen</td><td>Treatment</td><td>2</td><td>Tablets</td><td>300</td><td>0.52</td></tr>
-            <tr><td>Amoxiclav</td><td>TerjePillsAmoxiclav</td><td>Treatment</td><td>2</td><td>Tablets</td><td>1200</td><td>0.75</td></tr>
-            <tr><td>Piperacillin</td><td>TerjePillsPiperacylin</td><td>Treatment</td><td>2</td><td>Tablets</td><td>1100</td><td>0.45</td></tr>
-            <tr><td>Ketarol</td><td>TerjeAmpouleKetarol</td><td>Treatment</td><td>2</td><td>Ampoule</td><td>1200</td><td>0.5</td></tr>
-            <tr><td>Amoxivan</td><td>TerjeAmpouleAmoxivan</td><td>Treatment</td><td>2</td><td>Ampoule</td><td>900</td><td>0.3</td></tr>
-            <tr><td>Topoisomerase</td><td>TerjeInjectorTopoizomeraza</td><td>Treatment</td><td>3</td><td>Injector</td><td>900</td><td>0.65</td></tr>
-            <tr><td>Imipenem</td><td>TerjeAmpouleImipenem</td><td>Treatment</td><td>3</td><td>Ampoule</td><td>900</td><td>0.7</td></tr>
-            <tr><td>Flemoclave</td><td>TerjeAmpouleFlemoclav</td><td>Treatment</td><td>3</td><td>Ampoule</td><td>1200</td><td>0.8</td></tr>
-            <tr><td>Amoxiclav</td><td>TerjeInjectorAmoxiclav</td><td>Treatment</td><td>3</td><td>Injector</td><td>1800</td><td>0.6</td></tr>
-            <tr><td>Vaxicam</td><td>TerjeAmpouleVaxicam</td><td>Vaccine</td><td>-</td><td>Ampoule</td><td>14400</td><td>0.8</td></tr>
+            <tr><td>Tetracycline</td><td>TetracyclineAntibiotics</td><td>Treatment</td><td>1</td><td>Tabletten</td><td>300</td><td>0.45</td></tr>
+            <tr><td>Paracetamol</td><td>TerjePillsParacetamol</td><td>Treatment</td><td>1</td><td>Tabletten</td><td>200</td><td>0.45</td></tr>
+            <tr><td>Amibaktam</td><td>TerjePillsAmibaktam</td><td>Treatment</td><td>1</td><td>Tabletten</td><td>60</td><td>0.05</td></tr>
+            <tr><td>Ibuprofen</td><td>TerjePillsIbuprofen</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>300</td><td>0.35</td></tr>
+            <tr><td>Nurofen</td><td>TerjePillsNurofen</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>300</td><td>0.52</td></tr>
+            <tr><td>Amoxiclav</td><td>TerjePillsAmoxiclav</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>1200</td><td>0.75</td></tr>
+            <tr><td>Piperacillin</td><td>TerjePillsPiperacylin</td><td>Treatment</td><td>2</td><td>Tabletten</td><td>1100</td><td>0.45</td></tr>
+            <tr><td>Ketarol</td><td>TerjeAmpouleKetarol</td><td>Treatment</td><td>2</td><td>Ampulle</td><td>1200</td><td>0.5</td></tr>
+            <tr><td>Amoxivan</td><td>TerjeAmpouleAmoxivan</td><td>Treatment</td><td>2</td><td>Ampulle</td><td>900</td><td>0.3</td></tr>
+            <tr><td>Topoisomerase</td><td>TerjeInjectorTopoizomeraza</td><td>Treatment</td><td>3</td><td>Injektor</td><td>900</td><td>0.65</td></tr>
+            <tr><td>Imipenem</td><td>TerjeAmpouleImipenem</td><td>Treatment</td><td>3</td><td>Ampulle</td><td>900</td><td>0.7</td></tr>
+            <tr><td>Flemoclave</td><td>TerjeAmpouleFlemoclav</td><td>Treatment</td><td>3</td><td>Ampulle</td><td>1200</td><td>0.8</td></tr>
+            <tr><td>Amoxiclav</td><td>TerjeInjectorAmoxiclav</td><td>Treatment</td><td>3</td><td>Injektor</td><td>1800</td><td>0.6</td></tr>
+            <tr><td>Vaxicam</td><td>TerjeAmpouleVaxicam</td><td>Vaccine</td><td>-</td><td>Ampulle</td><td>14400</td><td>0.8</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
-
 </main>
-
+  
 <!-- FOOTER -->
 <footer>
   <p>&copy; 2025 Afterlife DayZ Community</p>
@@ -125,17 +166,20 @@
 
 <!-- SCRIPTS -->
 <script>
-// Menü
-document.getElementById('menuToggle').addEventListener('click', () => {
-  document.getElementById('menu').classList.toggle('open');
+// Menü Toggle
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
 });
 
-// Navbar Scroll
+// Navbar Scroll-Effekt
 window.addEventListener('scroll', () => {
-  document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Med-Buttons
+// Button-Funktion für med-section & Tabelle
 document.querySelectorAll('.med-button').forEach(button => {
   button.addEventListener('click', () => {
     const target = document.getElementById(button.dataset.target);
@@ -148,15 +192,17 @@ document.querySelectorAll('.med-button').forEach(button => {
   });
 });
 
-// Preloader
+// Preloader ausblenden
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
-  preloader.style.opacity = '0';
-  preloader.style.pointerEvents = 'none';
-  setTimeout(() => preloader.remove(), 500);
+  if (preloader) {
+    preloader.style.opacity = '0';
+    preloader.style.pointerEvents = 'none';
+    setTimeout(() => preloader.remove(), 500);
+  }
 });
 
-// Back to top
+// Back to Top
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
   backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
@@ -165,7 +211,7 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Fade-In Effekt
+// Fade-In Animationen
 const fadeElements = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -175,7 +221,8 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.1 });
-fadeElements.forEach(el => observer.observe(el));
+
+fadeElements.forEach(element => observer.observe(element));
 </script>
 
 </body>
