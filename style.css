@@ -361,3 +361,37 @@ p {
   max-width: 800px;         /* Optional: Begrenze Breite */
   width: 100%;
 }
+.story-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-title, .section-sub, .final-call {
+  margin-top: 2rem;
+  color: #ff1a1a;
+  text-shadow: 1px 1px 4px black;
+}
+
+.highlight-list, .vision-list, .feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem auto;
+  text-align: left;
+  max-width: 700px;
+}
+
+.highlight-list li,
+.vision-list li,
+.feature-list li {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.slogan {
+  font-weight: bold;
+  color: #ccc;
+  margin-top: 2rem;
+}
