@@ -395,3 +395,8 @@ p {
   color: #ccc;
   margin-top: 2rem;
 }
+.highlight-list li,
+.vision-list li,
+.feature-list li {
+  text-align: center;
+}
